@@ -75,7 +75,7 @@ class ConfigurationResponse(
  * @property bundleLocation "BundleLocation" property
  * @property properties list of configuration properties
  */
-internal class ConfigurationEntry(
+class ConfigurationEntry(
   var pid: String = "",
   var servicePid: String = "",
   var factoryPid: String = "",
