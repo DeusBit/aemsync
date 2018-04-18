@@ -1,0 +1,15 @@
+{
+  "results": [
+    {
+      "path": "/content/example/en/page1/jcr:content",
+      "type": "cq:PageContent"
+    },
+    {
+      "path": "/content/example/en/page2/jcr:content",
+      "type": "cq:PageContent"
+    }
+  ],
+  "total": -1,
+  "success": true,
+  "time": 1
+}

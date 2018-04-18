@@ -1,0 +1,6 @@
+rootProject.name = 'aemsync'
+rootProject.buildFileName = 'build.gradle.kts'
+
+include 'aemsync-api'
+include 'aemsync-core'
+include 'aemsync-test-framework'

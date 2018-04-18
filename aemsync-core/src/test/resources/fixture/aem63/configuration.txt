@@ -1,0 +1,2538 @@
+*** Configurations:
+Status: 322 configurations and 38 factories available
+
+PID = com.adobe.aem.upgrade.prechecks.mbean.impl.PreUpgradeTasksMBeanImpl
+  BundleLocation = Unbound
+  pre-upgrade.maintenance.tasks = [RevisionCleanupTask, WorkflowPurgeTask, com.day.cq.audit.impl.AuditLogMaintenanceTask, GenerateBundlesListFileTask]
+  service.pid = com.adobe.aem.upgrade.prechecks.mbean.impl.PreUpgradeTasksMBeanImpl
+
+PID = com.adobe.cq.account.api.AccountManagementService
+  BundleLocation = Unbound
+  cq.accountmanager.config.createaccountrequest.mail = create
+  cq.accountmanager.config.resetpwdrequest.mail = requestreset
+  cq.accountmanager.token.validity.period = 600
+  service.pid = com.adobe.cq.account.api.AccountManagementService
+
+PID = com.adobe.cq.experiencelog.impl.ExperienceLogConfigServlet
+  BundleLocation = Unbound
+  service.pid = com.adobe.cq.experiencelog.impl.ExperienceLogConfigServlet
+  trackingScript = //assets.adobedtm.com/98fab992275ef6366cc65f57f86b1e895a66c912/satelliteLib-1be49a4f81ac772ee656d1381455096eb3d9d3a6.js
+
+PID = com.adobe.cq.hc.ContentPackagesHealthCheck.8eb8f22c-6a10-4c39-b588-ec01e82f72c9
+  Factory PID = com.adobe.cq.hc.ContentPackagesHealthCheck
+  BundleLocation = Unbound
+  hc.mbean.name = AEM content packages
+  hc.name = Check for default AEM content packages
+  hc.tags = [packages, content, startup]
+  package.names = [com.adobe.granite.ui.coralui3, com.adobe.granite.activitystreams.content, com.adobe.granite.asset.content, com.adobe.granite.backup.content, com.adobe.granite.cluster.content, com.adobe.granite.datavisualization.content, com.adobe.granite.monitoring.content, com.adobe.granite.offloading.content, com.adobe.granite.platform.clientlibs, com.adobe.granite.platform.content, com.adobe.granite.platform.i18n, com.adobe.granite.platform.login, com.adobe.granite.platform.users, com.adobe.granite.platform.welcome, com.adobe.granite.replication.content, com.adobe.granite.security.content, com.adobe.granite.taskmanagement.content, com.adobe.granite.topology.content, com.adobe.granite.ui.content, com.adobe.granite.ui.legacy, com.adobe.granite.workflow.content, cq-apns-content, cq-chart-content, cq-cloudservices-content, cq-commerce-content, cq-compat-content, cq-connector-content, cq-content, cq-dam-content, cq-dashboards-content, cq-foundation-content, cq-healthcheck-content, cq-i18n-content, cq-launches-content, cq-mcm-content, cq-media-content, cq-platform-content, cq-portlet-director, cq-projects-content, com.adobe.coralui.rte-cq5, cq-ui-classic-content, cq-ui-touch-optimized-content, cq-upgrade-acl, cq-wcm-content]
+  service.factoryPid = com.adobe.cq.hc.ContentPackagesHealthCheck
+  service.pid = com.adobe.cq.hc.ContentPackagesHealthCheck.8eb8f22c-6a10-4c39-b588-ec01e82f72c9
+
+PID = com.adobe.cq.history.impl.HistoryRequestFilter
+  BundleLocation = Unbound
+  history.requestFilter.excludedExtensions = [json]
+  history.requestFilter.excludedSelectors = [thumb.48.48, thumb.319.319, image]
+  service.pid = com.adobe.cq.history.impl.HistoryRequestFilter
+
+PID = com.adobe.cq.history.impl.HistoryServiceImpl
+  BundleLocation = Unbound
+  history.service.logger = log.history
+  history.service.pathFilter = [+/content/.*]
+  history.service.resourceTypes = [cq:Page, dam:Asset]
+  service.pid = com.adobe.cq.history.impl.HistoryServiceImpl
+
+PID = com.adobe.cq.security.hc.packages.impl.ExampleContentHealthCheck
+  BundleLocation = Unbound
+  example_packages = [cq-geometrixx:name:You can uninstall all the Geometrixx content packages by uninstalling the cq-geometrixx-all-pkg via the Package Manager, adobe/aem6/sample:group:See https://www.adobe.com/go/aem6_2_docs_reference_site_uninstall_en for more information on how to uninstall sample content]
+  service.pid = com.adobe.cq.security.hc.packages.impl.ExampleContentHealthCheck
+
+PID = com.adobe.cq.social.activitystreams.listener.impl.ResourceActivityStreamProviderFactory
+  BundleLocation = Unbound
+  service.pid = com.adobe.cq.social.activitystreams.listener.impl.ResourceActivityStreamProviderFactory
+  streamName = community
+  streamPath = %context
+
+PID = com.adobe.cq.social.datastore.as.impl.ASResourceProviderFactory.4527f255-9a66-4583-866f-adf5818b1d3f
+  Factory PID = com.adobe.cq.social.datastore.as.impl.ASResourceProviderFactory
+  BundleLocation = Unbound
+  cache.on = true
+  cache.size = 2500
+  cache.ttl = 5000
+  port = 80
+  provider.query.languages = MONGOQUERY
+  provider.roots = /content/usergenerated/asi/cloud
+  service.factoryPid = com.adobe.cq.social.datastore.as.impl.ASResourceProviderFactory
+  service.pid = com.adobe.cq.social.datastore.as.impl.ASResourceProviderFactory.4527f255-9a66-4583-866f-adf5818b1d3f
+  version.id = v1
+
+PID = com.adobe.cq.social.datastore.op.impl.SocialMSResourceProviderFactory.61301c04-1b2c-4569-9f20-3995d76945e1
+  Factory PID = com.adobe.cq.social.datastore.op.impl.SocialMSResourceProviderFactory
+  BundleLocation = Unbound
+  cache.on = true
+  cache.size = 2500
+  cache.ttl = 5000
+  provider.roots = /content/usergenerated/asi/mongo
+  service.factoryPid = com.adobe.cq.social.datastore.op.impl.SocialMSResourceProviderFactory
+  service.pid = com.adobe.cq.social.datastore.op.impl.SocialMSResourceProviderFactory.61301c04-1b2c-4569-9f20-3995d76945e1
+  solr.commit = 0
+  solr.zk.timeout = 100
+
+PID = com.adobe.cq.social.datastore.rdb.impl.SocialRDBResourceProviderFactory.9efd2af6-f08a-4db7-88da-31a08ccdffa5
+  Factory PID = com.adobe.cq.social.datastore.rdb.impl.SocialRDBResourceProviderFactory
+  BundleLocation = Unbound
+  cache.on = true
+  cache.size = 2500
+  cache.ttl = 5000
+  provider.roots = /content/usergenerated/asi/rdbms
+  service.factoryPid = com.adobe.cq.social.datastore.rdb.impl.SocialRDBResourceProviderFactory
+  service.pid = com.adobe.cq.social.datastore.rdb.impl.SocialRDBResourceProviderFactory.9efd2af6-f08a-4db7-88da-31a08ccdffa5
+  solr.commit = 0
+  solr.zk.timeout = 100
+
+PID = com.adobe.cq.social.enablement.services.impl.AuthorMarkerImpl
+  BundleLocation = Unbound
+  service.pid = com.adobe.cq.social.enablement.services.impl.AuthorMarkerImpl
+
+PID = com.adobe.cq.social.handlebars.GuavaTemplateCacheImpl
+  BundleLocation = Unbound
+  parameter.guava.cache.enabled = false
+  parameter.guava.cache.params = maximumSize=1000,expireAfterWrite=10m
+  parameter.guava.cache.reload = true
+  service.pid = com.adobe.cq.social.handlebars.GuavaTemplateCacheImpl
+  service.ranking = 1000
+
+PID = com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl.3eeb2738-f936-4acd-9271-07cf8d215744
+  Factory PID = com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl
+  BundleLocation = Unbound
+  attachmentTypeBlacklist = [.ade, .adp, .app, .asa, .asp, .bas, .bat, .cer, .chm, .cmd, .com, .cpl, .crt, .csh, .dll, .exe, .fxp, .hlp, .hta, .htm, .html, .htr, .inf, .ins, .isp, .its, .js, .jse, .ksh, .lnk, .mad, .maf, .mag, .mam, .maq, .mar, .mas, .mat, .mau, .mav, .maw, .mda, .mdb, .mde, .mdt, .mdw, .mdz, .mht, .mhtm, .mhtml, .msc, .msi, .msp, .mst, .ocx, .ops, .pcd, .pif, .prf, .prg, .reg, .scf, .scr, .sct, .shb, .shs, .tmp, .url, .vb, .vbe, .vbs, .vbx, .vsmacros, .vss, .vst, .vsw, .ws, .wsc, .wsf, .wsh, .xsl]
+  inbox.path = /mail/default-messaging/inbox
+  maxTotalAttachmentSize = 104857600
+  sentitems.path = /mail/default-messaging/sent
+  service.factoryPid = com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl
+  service.pid = com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl.3eeb2738-f936-4acd-9271-07cf8d215744
+  serviceSelector = /bin/default-messaging
+  supportAttachments = true
+
+PID = com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl.b401adb1-baff-493a-b6fe-97bf18c78e74
+  Factory PID = com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl
+  BundleLocation = Unbound
+  attachmentTypeBlacklist = [.ade, .adp, .app, .asa, .asp, .bas, .bat, .cer, .chm, .cmd, .com, .cpl, .crt, .csh, .dll, .exe, .fxp, .hlp, .hta, .htm, .html, .htr, .inf, .ins, .isp, .its, .js, .jse, .ksh, .lnk, .mad, .maf, .mag, .mam, .maq, .mar, .mas, .mat, .mau, .mav, .maw, .mda, .mdb, .mde, .mdt, .mdw, .mdz, .mht, .mhtm, .mhtml, .msc, .msi, .msp, .mst, .ocx, .ops, .pcd, .pif, .prf, .prg, .reg, .scf, .scr, .sct, .shb, .shs, .tmp, .url, .vb, .vbe, .vbs, .vbx, .vsmacros, .vss, .vst, .vsw, .ws, .wsc, .wsf, .wsh, .xsl]
+  inbox.path = /mail/community/inbox
+  maxTotalAttachmentSize = 104857600
+  sentitems.path = /mail/community/sent
+  service.factoryPid = com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl
+  service.pid = com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl.b401adb1-baff-493a-b6fe-97bf18c78e74
+  serviceSelector = /bin/community
+  supportAttachments = true
+
+PID = com.adobe.cq.social.provider.jcr.impl.SocialJcrResourceProviderFactory.5cbd5c46-f42d-4827-a4db-8ba5b46da97c
+  Factory PID = com.adobe.cq.social.provider.jcr.impl.SocialJcrResourceProviderFactory
+  BundleLocation = Unbound
+  service.factoryPid = com.adobe.cq.social.provider.jcr.impl.SocialJcrResourceProviderFactory
+  service.pid = com.adobe.cq.social.provider.jcr.impl.SocialJcrResourceProviderFactory.5cbd5c46-f42d-4827-a4db-8ba5b46da97c
+  version = 2
+
+PID = com.adobe.cq.social.srp.impl.SocialSolrConnector.6f2ed392-9a12-45ec-9b69-920daebe924a
+  Factory PID = com.adobe.cq.social.srp.impl.SocialSolrConnector
+  BundleLocation = Unbound
+  service.factoryPid = com.adobe.cq.social.srp.impl.SocialSolrConnector
+  service.pid = com.adobe.cq.social.srp.impl.SocialSolrConnector.6f2ed392-9a12-45ec-9b69-920daebe924a
+  srp.type = dsrp
+
+PID = com.adobe.cq.social.srp.impl.SocialSolrConnector.87364794-a10c-40e9-8eba-560fbf294cf5
+  Factory PID = com.adobe.cq.social.srp.impl.SocialSolrConnector
+  BundleLocation = Unbound
+  service.factoryPid = com.adobe.cq.social.srp.impl.SocialSolrConnector
+  service.pid = com.adobe.cq.social.srp.impl.SocialSolrConnector.87364794-a10c-40e9-8eba-560fbf294cf5
+  srp.type = msrp
+
+PID = com.adobe.cq.upgrades.cleanup.impl.UpgradeContentCleanup.4141d52a-6320-4216-a15a-98688fccd931
+  Factory PID = com.adobe.cq.upgrades.cleanup.impl.UpgradeContentCleanup
+  BundleLocation = Unbound
+  delete.path.regexps = [/libs/cc]
+  delete.sql2.query = SELECT * from [nt:folder] WHERE ischildnode('/libs')
+  service.factoryPid = com.adobe.cq.upgrades.cleanup.impl.UpgradeContentCleanup
+  service.pid = com.adobe.cq.upgrades.cleanup.impl.UpgradeContentCleanup.4141d52a-6320-4216-a15a-98688fccd931
+
+PID = com.adobe.cq.upgrades.cleanup.impl.UpgradeContentCleanup.ea8ccf41-7cca-40d4-b1d1-569a7aa18205
+  Factory PID = com.adobe.cq.upgrades.cleanup.impl.UpgradeContentCleanup
+  BundleLocation = Unbound
+  delete.path.regexps = [/etc/packages/[dD]ay/.*, /etc/packages/[aA]dobe/.*, /etc/packages/com/[dD]ay/.*, /etc/packages/com/[aA]dobe/.*, /etc/packages/com.([dD]ay|[aA]dobe).cq/.*, /etc/packages/aemfd/.*]
+  delete.sql2.query = SELECT child.* from [nt:file] AS child INNER JOIN [nt:folder] AS parent ON ISCHILDNODE(child,parent) WHERE ISDESCENDANTNODE(parent,'/etc/packages') AND name(parent)='.snapshot' AND ISDESCENDANTNODE(child,'/etc/packages') AND NAME(child) NOT LIKE '%geometrixx%'
+  service.factoryPid = com.adobe.cq.upgrades.cleanup.impl.UpgradeContentCleanup
+  service.pid = com.adobe.cq.upgrades.cleanup.impl.UpgradeContentCleanup.ea8ccf41-7cca-40d4-b1d1-569a7aa18205
+
+PID = com.adobe.granite.apicontroller.FilterResolverHookFactory
+  BundleLocation = launchpad:resources/install/0/com.adobe.granite.apicontroller-1.0.2.jar
+  com.adobe.granite.conf.ui.core = com.adobe.*,com.day.*
+  com.adobe.granite.dropwizard.metrics = com.adobe.*,com.day.*,org.apache.jackrabbit.*,org.apache.sling.*
+  service.pid = com.adobe.granite.apicontroller.FilterResolverHookFactory
+
+PID = com.adobe.granite.auth.oauth.impl.helper.ProviderConfigManager
+  BundleLocation = Unbound
+  oauth.cookie.login.timeout = -1
+  oauth.cookie.max.age = -1
+  service.pid = com.adobe.granite.auth.oauth.impl.helper.ProviderConfigManager
+
+PID = com.adobe.granite.auth.oauth.provider.732ae932-279c-4496-b579-82a9bc055b66
+  Factory PID = com.adobe.granite.auth.oauth.provider
+  BundleLocation = launchpad:resources/install/0/com.adobe.granite.auth.oauth-1.3.10.jar
+  oauth.access.token.persist = true
+  oauth.client.id = 800016463473935
+  oauth.client.secret = dfa9f5e1371bf69a9eea7bbd7a42f4aa
+  oauth.config.id = e6897caa09f6514a8bfcaec6b5a3d05f
+  oauth.config.provider.id = soco-facebook
+  oauth.create.users = true
+  oauth.create.users.groups = []
+  oauth.encode.userids = false
+  oauth.scope = [email]
+  service.factoryPid = com.adobe.granite.auth.oauth.provider
+  service.pid = com.adobe.granite.auth.oauth.provider.732ae932-279c-4496-b579-82a9bc055b66
+
+PID = com.adobe.granite.auth.oauth.provider.b1f8e18a-d81d-4ba0-862d-5cfe29b6f082
+  Factory PID = com.adobe.granite.auth.oauth.provider
+  BundleLocation = launchpad:resources/install/0/com.adobe.granite.auth.oauth-1.3.10.jar
+  oauth.access.token.persist = true
+  oauth.client.id = 285vLjx5UqtYKhu5hPIdaViVg
+  oauth.client.secret = rWRJtjLmpbr0B85Yaseeoi5tYRfQagfLdB4QZm1koQlEuCu5Xk
+  oauth.config.id = bdaf2cc8722f6d2f94efd5464af1784f
+  oauth.config.provider.id = soco-twitter
+  oauth.create.users = true
+  oauth.create.users.groups = []
+  oauth.encode.userids = false
+  service.factoryPid = com.adobe.granite.auth.oauth.provider
+  service.pid = com.adobe.granite.auth.oauth.provider.b1f8e18a-d81d-4ba0-862d-5cfe29b6f082
+
+PID = com.adobe.granite.csrf.impl.CSRFFilter
+  BundleLocation = Unbound
+  filter.enable.safe.user.agents = false
+  filter.methods = [POST, PUT, DELETE]
+  filter.safe.user.agents = [Apache-HttpClient/*, Jakarta Commons-HttpClient/*, Jakarta-Commons-VFS, curl/*, Wget/*, WebDAVFS/*, Microsoft-WebDAV-MiniRedir/*, Ruby, Adobe-Campaign/*, Forms-Mobile *]
+  service.pid = com.adobe.granite.csrf.impl.CSRFFilter
+
+PID = com.adobe.granite.distribution.core.impl.CryptoDistributionTransportSecretProvider.2c52a5ae-fac4-468f-ba8e-e582ecefe443
+  Factory PID = com.adobe.granite.distribution.core.impl.CryptoDistributionTransportSecretProvider
+  BundleLocation = Unbound
+  encryptedPassword = admin
+  name = default
+  service.factoryPid = com.adobe.granite.distribution.core.impl.CryptoDistributionTransportSecretProvider
+  service.pid = com.adobe.granite.distribution.core.impl.CryptoDistributionTransportSecretProvider.2c52a5ae-fac4-468f-ba8e-e582ecefe443
+  username = admin
+
+PID = com.adobe.granite.distribution.core.impl.CryptoDistributionTransportSecretProvider.d9a6f514-c6de-489f-8704-eb79a27381fb
+  Factory PID = com.adobe.granite.distribution.core.impl.CryptoDistributionTransportSecretProvider
+  BundleLocation = Unbound
+  encryptedPassword = admin
+  name = socialpubsync-publishUser
+  service.factoryPid = com.adobe.granite.distribution.core.impl.CryptoDistributionTransportSecretProvider
+  service.pid = com.adobe.granite.distribution.core.impl.CryptoDistributionTransportSecretProvider.d9a6f514-c6de-489f-8704-eb79a27381fb
+  username = admin
+
+PID = com.adobe.granite.maintenance.crx.impl.DataStoreGarbageCollectionTask
+  BundleLocation = Unbound
+  granite.maintenance.mandatory = false
+  job.topics = com/adobe/granite/maintenance/job/DataStoreGarbageCollectionTask
+  service.pid = com.adobe.granite.maintenance.crx.impl.DataStoreGarbageCollectionTask
+
+PID = com.adobe.granite.maintenance.crx.impl.RevisionCleanupTask
+  BundleLocation = Unbound
+  job.topics = com/adobe/granite/maintenance/job/RevisionCleanupTask
+  service.pid = com.adobe.granite.maintenance.crx.impl.RevisionCleanupTask
+
+PID = com.adobe.granite.monitoring.impl.ScriptConfigImpl.9f7b2876-7d4c-4b40-9bf3-dd26c07f2ae8
+  Factory PID = com.adobe.granite.monitoring.impl.ScriptConfigImpl
+  BundleLocation = Unbound
+  interval = 30
+  script.filename = cpu.sh
+  script.path = cpu.sh
+  script.platform = [.*, -Windows.*]
+  service.factoryPid = com.adobe.granite.monitoring.impl.ScriptConfigImpl
+  service.pid = com.adobe.granite.monitoring.impl.ScriptConfigImpl.9f7b2876-7d4c-4b40-9bf3-dd26c07f2ae8
+
+PID = com.adobe.granite.monitoring.impl.ScriptConfigImpl.e473b79b-7bb7-438d-87d6-4c2ee0a3f0a0
+  Factory PID = com.adobe.granite.monitoring.impl.ScriptConfigImpl
+  BundleLocation = Unbound
+  interval = 30
+  script.filename = diskusage.sh
+  script.path = diskusage.sh
+  script.platform = [.*, -Windows.*]
+  service.factoryPid = com.adobe.granite.monitoring.impl.ScriptConfigImpl
+  service.pid = com.adobe.granite.monitoring.impl.ScriptConfigImpl.e473b79b-7bb7-438d-87d6-4c2ee0a3f0a0
+
+PID = com.adobe.granite.offloading.impl.OffloadingJobCloner
+  BundleLocation = Unbound
+  offloading.jobcloner.enabled = true
+  service.pid = com.adobe.granite.offloading.impl.OffloadingJobCloner
+
+PID = com.adobe.granite.offloading.impl.OffloadingJobOffloader
+  BundleLocation = Unbound
+  offloading.offloader.enabled = true
+  service.pid = com.adobe.granite.offloading.impl.OffloadingJobOffloader
+
+PID = com.adobe.granite.offloading.impl.transporter.OffloadingAgentManager
+  BundleLocation = Unbound
+  offloading.agentmanager.enabled = true
+  service.pid = com.adobe.granite.offloading.impl.transporter.OffloadingAgentManager
+
+PID = com.adobe.granite.offloading.impl.transporter.OffloadingDefaultTransporter
+  BundleLocation = Unbound
+  offloading.transporter.default.enabled = true
+  service.pid = com.adobe.granite.offloading.impl.transporter.OffloadingDefaultTransporter
+
+PID = com.adobe.granite.optout.impl.OptOutServiceImpl
+  BundleLocation = Unbound
+  optout.cookies = [cq-opt-out, omniture_optout]
+  optout.whitelist.cookies = [cq-show-clientcontext, cq-scrollpos, cq-sk-collapsed, login-token, ys-cq-siteadmin-tree, ys-cq-damadmin-tree, ys-cq-collabadmin-tree, ys-cq-miscadmin-tree, ys-cq-tagadmin, ys-cq-cf-clipboard, ys-cq-cf-tabpanel, SessionPersistence, wcmmode, CommercePersistence, cq-authoring-mode]
+  service.pid = com.adobe.granite.optout.impl.OptOutServiceImpl
+
+PID = com.adobe.granite.repository.ServiceUserConfiguration.125a1419-e4af-458a-8c88-002669a78566
+  Factory PID = com.adobe.granite.repository.ServiceUserConfiguration
+  BundleLocation = Unbound
+  service.factoryPid = com.adobe.granite.repository.ServiceUserConfiguration
+  service.pid = com.adobe.granite.repository.ServiceUserConfiguration.125a1419-e4af-458a-8c88-002669a78566
+  service.ranking = 0
+  serviceusers.list = [activitypurgesrv, assetlinkshareservice, assetusagetrackeruser, dam-activitywriter-service, dam-asseteventmonitor-service, dam-formitemseditor-service, dam-teammgr-service, idsjobprocessor, resourcecollectionservice, webdavbkpservice]
+  serviceusers.simpleSubjectPopulation = true
+
+PID = com.adobe.granite.repository.ServiceUserConfiguration.538ca502-ac32-4d7a-a245-6dac980afa17
+  Factory PID = com.adobe.granite.repository.ServiceUserConfiguration
+  BundleLocation = Unbound
+  service.factoryPid = com.adobe.granite.repository.ServiceUserConfiguration
+  service.pid = com.adobe.granite.repository.ServiceUserConfiguration.538ca502-ac32-4d7a-a245-6dac980afa17
+  service.ranking = 0
+  serviceusers.list = [security-userproperties-service, translation-config-service, webservice-support-servicelibfinder, repository-reader-service, communities-utility-reader]
+  serviceusers.simpleSubjectPopulation = true
+
+PID = com.adobe.granite.repository.ServiceUserConfiguration.611b18bf-98e2-4e97-8d27-683c4b241bc8
+  Factory PID = com.adobe.granite.repository.ServiceUserConfiguration
+  BundleLocation = Unbound
+  service.factoryPid = com.adobe.granite.repository.ServiceUserConfiguration
+  service.pid = com.adobe.granite.repository.ServiceUserConfiguration.611b18bf-98e2-4e97-8d27-683c4b241bc8
+  serviceusers.list = [sling-scripting, ssl-service, sling-context-aware-config-web-console, sling-mapping, sling-readall, sling-tenant]
+  serviceusers.simpleSubjectPopulation = true
+
+PID = com.adobe.granite.repository.impl.CommitStatsConfig
+  BundleLocation = Unbound
+  enabled = true
+  service.pid = com.adobe.granite.repository.impl.CommitStatsConfig
+
+PID = com.adobe.granite.resourcestatus.impl.CompositeStatusType.89c2bccd-43a0-4f6f-9837-f5de4af9df32
+  Factory PID = com.adobe.granite.resourcestatus.impl.CompositeStatusType
+  BundleLocation = Unbound
+  name = content-fragments
+  service.factoryPid = com.adobe.granite.resourcestatus.impl.CompositeStatusType
+  service.pid = com.adobe.granite.resourcestatus.impl.CompositeStatusType.89c2bccd-43a0-4f6f-9837-f5de4af9df32
+  types = [content-fragments-usages]
+
+PID = com.adobe.granite.resourcestatus.impl.CompositeStatusType.b1e3acde-0975-4932-81e8-7f42c9329825
+  Factory PID = com.adobe.granite.resourcestatus.impl.CompositeStatusType
+  BundleLocation = Unbound
+  name = editor
+  service.factoryPid = com.adobe.granite.resourcestatus.impl.CompositeStatusType
+  service.pid = com.adobe.granite.resourcestatus.impl.CompositeStatusType.b1e3acde-0975-4932-81e8-7f42c9329825
+  types = [workflow]
+
+PID = com.adobe.granite.security.user.UserPropertiesService
+  BundleLocation = Unbound
+  granite.userproperties.resourcetypes = [preferences=cq:Preferences, profiles/.*=cq/security/components/profile, profile=cq/security/components/profile]
+  service.pid = com.adobe.granite.security.user.UserPropertiesService
+
+PID = com.adobe.granite.ui.clientlibs.impl.HtmlLibraryManagerImpl
+  BundleLocation = Unbound
+  htmllibmanager.debug = false
+  htmllibmanager.excluded.path.list = [/etc/commerce/classifications, /etc/commerce/collections, /etc/commerce/payment-methods, /etc/commerce/products, /etc/commerce/shipping-methods, /etc/reports/auditreport, /etc/reports/compreport, /etc/segmentation, /etc/taskmanagement, /etc/workflow/instances]
+  htmllibmanager.gzip = true
+  htmllibmanager.minify = false
+  htmllibmanager.timing = false
+  service.pid = com.adobe.granite.ui.clientlibs.impl.HtmlLibraryManagerImpl
+
+PID = com.adobe.granite.workflow.core.offloading.WorkflowOffloadingJobConsumer.656112c1-3119-4811-bcaa-5485c8d4ead0
+  Factory PID = com.adobe.granite.workflow.core.offloading.WorkflowOffloadingJobConsumer
+  BundleLocation = Unbound
+  job.topics = com/adobe/granite/workflow/offloading
+  service.factoryPid = com.adobe.granite.workflow.core.offloading.WorkflowOffloadingJobConsumer
+  service.pid = com.adobe.granite.workflow.core.offloading.WorkflowOffloadingJobConsumer.656112c1-3119-4811-bcaa-5485c8d4ead0
+
+PID = com.adobe.xmp.worker.files.ncomm.XMPFilesNComm
+  BundleLocation = Unbound
+  logDir = crx-quickstart/logs
+  maxConnections = 4
+  maxRequests = 50000
+  requestTimeout = 30000
+  service.pid = com.adobe.xmp.worker.files.ncomm.XMPFilesNComm
+
+PID = com.day.cq.analytics.testandtarget.impl.PushAuthorCampaignPageListener
+  BundleLocation = Unbound
+  cq.analytics.testandtarget.pushauthorcampaignpagelistener.enabled = false
+  service.pid = com.day.cq.analytics.testandtarget.impl.PushAuthorCampaignPageListener
+
+PID = com.day.cq.auth.impl.LoginSelectorHandler
+  BundleLocation = Unbound
+  auth.loginselector.defaultloginpage = /libs/granite/core/content/login
+  service.pid = com.day.cq.auth.impl.LoginSelectorHandler
+
+PID = com.day.cq.commons.impl.ExternalizerImpl
+  BundleLocation = Unbound
+  externalizer.domains = [local http://localhost:4502, author http://localhost:4502, publish http://localhost:4503]
+  service.pid = com.day.cq.commons.impl.ExternalizerImpl
+
+PID = com.day.cq.commons.servlets.RootMappingServlet
+  BundleLocation = Unbound
+  rootmapping.target = /aem/start.html
+  service.pid = com.day.cq.commons.servlets.RootMappingServlet
+
+PID = com.day.cq.dam.core.impl.jmx.AssetMigrationMBeanImpl
+  BundleLocation = Unbound
+  jmx.objectname = com.day.cq.dam:type=Associate Asset IDs
+  service.pid = com.day.cq.dam.core.impl.jmx.AssetMigrationMBeanImpl
+
+PID = com.day.cq.dam.scene7.impl.Scene7ConfigurationEventListener
+  BundleLocation = Unbound
+  cq.dam.scene7.configurationeventlistener.enabled = true
+  service.pid = com.day.cq.dam.scene7.impl.Scene7ConfigurationEventListener
+
+PID = com.day.cq.dam.scene7.impl.Scene7DamChangeEventListener
+  BundleLocation = Unbound
+  cq.dam.scene7.damchangeeventlistener.enabled = false
+  service.pid = com.day.cq.dam.scene7.impl.Scene7DamChangeEventListener
+
+PID = com.day.cq.dam.video.servlet.VideoTestServlet
+  BundleLocation = Unbound
+  enabled = true
+  service.pid = com.day.cq.dam.video.servlet.VideoTestServlet
+
+PID = com.day.cq.polling.importer.impl.ManagedPollConfigImpl.13630aa6-6d7e-44a8-827e-fc4702a6069a
+  Factory PID = com.day.cq.polling.importer.impl.ManagedPollConfigImpl
+  BundleLocation = Unbound
+  enabled = true
+  id = aem-analytics-integration-last30DaysPrev
+  interval = 43200
+  login =
+  reference = true
+  service.factoryPid = com.day.cq.polling.importer.impl.ManagedPollConfigImpl
+  service.pid = com.day.cq.polling.importer.impl.ManagedPollConfigImpl.13630aa6-6d7e-44a8-827e-fc4702a6069a
+  source = screport:default
+  target =
+
+PID = com.day.cq.polling.importer.impl.ManagedPollConfigImpl.3bad9b79-faa5-4cf4-887d-de182633044f
+  Factory PID = com.day.cq.polling.importer.impl.ManagedPollConfigImpl
+  BundleLocation = Unbound
+  enabled = true
+  id = aem-analytics-integration-thisYear
+  interval = 86400
+  login =
+  reference = true
+  service.factoryPid = com.day.cq.polling.importer.impl.ManagedPollConfigImpl
+  service.pid = com.day.cq.polling.importer.impl.ManagedPollConfigImpl.3bad9b79-faa5-4cf4-887d-de182633044f
+  source = screport:default
+  target =
+
+PID = com.day.cq.polling.importer.impl.ManagedPollConfigImpl.5286b24d-7d76-4eec-a818-e46eb351ea6a
+  Factory PID = com.day.cq.polling.importer.impl.ManagedPollConfigImpl
+  BundleLocation = Unbound
+  enabled = true
+  id = aem-analytics-integration-last90DaysPrev
+  interval = 43200
+  login =
+  reference = true
+  service.factoryPid = com.day.cq.polling.importer.impl.ManagedPollConfigImpl
+  service.pid = com.day.cq.polling.importer.impl.ManagedPollConfigImpl.5286b24d-7d76-4eec-a818-e46eb351ea6a
+  source = screport:default
+  target =
+
+PID = com.day.cq.polling.importer.impl.ManagedPollConfigImpl.5be708d8-257a-4a75-93fb-3d388eb94fee
+  Factory PID = com.day.cq.polling.importer.impl.ManagedPollConfigImpl
+  BundleLocation = Unbound
+  enabled = true
+  id = aem-analytics-integration-lastYear
+  interval = 31536000
+  login =
+  reference = true
+  service.factoryPid = com.day.cq.polling.importer.impl.ManagedPollConfigImpl
+  service.pid = com.day.cq.polling.importer.impl.ManagedPollConfigImpl.5be708d8-257a-4a75-93fb-3d388eb94fee
+  source = screport:default
+  target =
+
+PID = com.day.cq.polling.importer.impl.ManagedPollConfigImpl.84a7e058-f83d-47d0-b19f-49165be36f62
+  Factory PID = com.day.cq.polling.importer.impl.ManagedPollConfigImpl
+  BundleLocation = Unbound
+  enabled = true
+  id = aem-analytics-integration-last30Days
+  interval = 43200
+  login =
+  reference = true
+  service.factoryPid = com.day.cq.polling.importer.impl.ManagedPollConfigImpl
+  service.pid = com.day.cq.polling.importer.impl.ManagedPollConfigImpl.84a7e058-f83d-47d0-b19f-49165be36f62
+  source = screport:default
+  target =
+
+PID = com.day.cq.polling.importer.impl.ManagedPollConfigImpl.de111b30-43e8-4b7a-bfc7-8ee975066222
+  Factory PID = com.day.cq.polling.importer.impl.ManagedPollConfigImpl
+  BundleLocation = Unbound
+  enabled = true
+  id = aem-analytics-integration-last90Days
+  interval = 43200
+  login =
+  reference = true
+  service.factoryPid = com.day.cq.polling.importer.impl.ManagedPollConfigImpl
+  service.pid = com.day.cq.polling.importer.impl.ManagedPollConfigImpl.de111b30-43e8-4b7a-bfc7-8ee975066222
+  source = screport:default
+  target =
+
+PID = com.day.cq.replication.audit.ReplicationEventListener
+  BundleLocation = Unbound
+  service.pid = com.day.cq.replication.audit.ReplicationEventListener
+
+PID = com.day.cq.replication.impl.ReplicationContentFactoryProviderImpl
+  BundleLocation = Unbound
+  replication.content.useFileStorage = false
+  service.pid = com.day.cq.replication.impl.ReplicationContentFactoryProviderImpl
+
+PID = com.day.cq.replication.impl.ReverseReplicator
+  BundleLocation = Unbound
+  service.pid = com.day.cq.replication.impl.ReverseReplicator
+
+PID = com.day.cq.rewriter.linkchecker.impl.LinkCheckerImpl
+  BundleLocation = Unbound
+  service.bad_link_tolerance_interval = 48
+  service.check_override_patterns = [^system/]
+  service.pid = com.day.cq.rewriter.linkchecker.impl.LinkCheckerImpl
+  service.special_link_patterns =
+  service.special_link_prefix = [javascript:, data:, mailto:, tel:, #, <!--, ${]
+
+PID = com.day.cq.rewriter.linkchecker.impl.LinkInfoStorageImpl
+  BundleLocation = Unbound
+  service.pid = com.day.cq.rewriter.linkchecker.impl.LinkInfoStorageImpl
+  service.save_external_link_references = false
+
+PID = com.day.cq.searchpromote.impl.PublishSearchPromoteConfigHandler
+  BundleLocation = Unbound
+  cq.searchpromote.confighandler.enabled = false
+  service.pid = com.day.cq.searchpromote.impl.PublishSearchPromoteConfigHandler
+
+PID = com.day.cq.searchpromote.impl.SearchPromoteServiceImpl
+  BundleLocation = Unbound
+  cq.searchpromote.configuration.environment = stage
+  service.pid = com.day.cq.searchpromote.impl.SearchPromoteServiceImpl
+
+PID = com.day.cq.security.ACLSetup
+  BundleLocation = Unbound
+  cq.aclsetup.rules = [allow;inherit;everyone;/]
+  service.pid = com.day.cq.security.ACLSetup
+
+PID = com.day.cq.wcm.core.WCMRequestFilter
+  BundleLocation = Unbound
+  service.pid = com.day.cq.wcm.core.WCMRequestFilter
+  wcmfilter.mode = edit
+
+PID = com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl
+  BundleLocation = Unbound
+  authoringUIModeService.default = TOUCH
+  authoringUIModeService.editorUrl.classic = /cf#
+  authoringUIModeService.editorUrl.touch = /editor.html
+  service.pid = com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl
+
+PID = com.day.cq.wcm.core.impl.LinkCheckerConfigurationFactoryImpl.bcb3a8f0-7952-4519-863b-f143f5f94ec4
+  Factory PID = com.day.cq.wcm.core.impl.LinkCheckerConfigurationFactoryImpl
+  BundleLocation = Unbound
+  link.expired.prefix = <img src="/libs/cq/linkchecker/resources/linkcheck_o.gif" alt="expired link: %s" title="expired link: %s" border="0">
+  link.expired.remove = false
+  link.expired.suffix = <img src="/libs/cq/linkchecker/resources/linkcheck_c.gif" border="0">
+  link.invalid.prefix = <img src="/libs/cq/linkchecker/resources/linkcheck_o.gif" alt="invalid link: %s" title="invalid link: %s" border="0">
+  link.invalid.remove = true
+  link.invalid.suffix = <img src="/libs/cq/linkchecker/resources/linkcheck_c.gif" border="0">
+  link.predated.prefix = <img src="/libs/cq/linkchecker/resources/linkcheck_o.gif" alt="predated link: %s" title="predated link: %s" border="0">
+  link.predated.remove = false
+  link.predated.suffix = <img src="/libs/cq/linkchecker/resources/linkcheck_c.gif" border="0">
+  link.wcmmodes = [EDIT, READ_ONLY, DESIGN]
+  service.factoryPid = com.day.cq.wcm.core.impl.LinkCheckerConfigurationFactoryImpl
+  service.pid = com.day.cq.wcm.core.impl.LinkCheckerConfigurationFactoryImpl.bcb3a8f0-7952-4519-863b-f143f5f94ec4
+
+PID = com.day.cq.wcm.core.impl.WCMDeveloperModeFilter
+  BundleLocation = Unbound
+  configured =
+  service.pid = com.day.cq.wcm.core.impl.WCMDeveloperModeFilter
+
+PID = com.day.cq.wcm.core.impl.event.PageEventAuditListener
+  BundleLocation = Unbound
+  configured =
+  service.pid = com.day.cq.wcm.core.impl.event.PageEventAuditListener
+
+PID = com.day.cq.wcm.core.impl.variants.PageVariantsProviderImpl
+  BundleLocation = Unbound
+  default.externalizer.domain = author
+  service.pid = com.day.cq.wcm.core.impl.variants.PageVariantsProviderImpl
+
+PID = com.day.cq.wcm.core.impl.warp.TimeWarpFilter
+  BundleLocation = Unbound
+  filter.order = 2000
+  filter.scope = request
+  service.pid = com.day.cq.wcm.core.impl.warp.TimeWarpFilter
+
+PID = com.day.cq.wcm.core.mvt.MVTStatisticsImpl
+  BundleLocation = Unbound
+  mvtstatistics.trackingurl = http://localhost:4502/libs/wcm/mvt/tracker
+  service.pid = com.day.cq.wcm.core.mvt.MVTStatisticsImpl
+
+PID = com.day.cq.wcm.core.stats.PageViewStatisticsImpl
+  BundleLocation = Unbound
+  pageviewstatistics.trackingscript.enabled = false
+  pageviewstatistics.trackingurl = http://localhost:4502/libs/wcm/stats/tracker
+  service.pid = com.day.cq.wcm.core.stats.PageViewStatisticsImpl
+
+PID = com.day.cq.wcm.foundation.forms.impl.FormParagraphPostProcessor.105ceaa1-02b0-4411-a689-d3fcf7ec8705
+  Factory PID = com.day.cq.wcm.foundation.forms.impl.FormParagraphPostProcessor
+  BundleLocation = Unbound
+  forms.formparagraphpostprocessor.enabled = true
+  forms.formparagraphpostprocessor.formresourcetypes = [core/wcm/components/form/container/v1/container]
+  service.factoryPid = com.day.cq.wcm.foundation.forms.impl.FormParagraphPostProcessor
+  service.pid = com.day.cq.wcm.foundation.forms.impl.FormParagraphPostProcessor.105ceaa1-02b0-4411-a689-d3fcf7ec8705
+
+PID = com.day.cq.wcm.foundation.forms.impl.FormParagraphPostProcessor.3a1acc33-a39a-483c-84c6-3de03e41646b
+  Factory PID = com.day.cq.wcm.foundation.forms.impl.FormParagraphPostProcessor
+  BundleLocation = Unbound
+  forms.formparagraphpostprocessor.enabled = true
+  forms.formparagraphpostprocessor.formresourcetypes = [foundation/components/form/start, foundation/components/form/end]
+  service.factoryPid = com.day.cq.wcm.foundation.forms.impl.FormParagraphPostProcessor
+  service.pid = com.day.cq.wcm.foundation.forms.impl.FormParagraphPostProcessor.3a1acc33-a39a-483c-84c6-3de03e41646b
+
+PID = com.day.cq.wcm.foundation.forms.impl.MailServlet.4d99eb63-60e8-494e-9d85-09de45522a1f
+  Factory PID = com.day.cq.wcm.foundation.forms.impl.MailServlet
+  BundleLocation = Unbound
+  resource.blacklist = [/content/usergenerated]
+  resource.whitelist = [/content, /home]
+  service.description = Foundation Form Mail Servlet
+  service.factoryPid = com.day.cq.wcm.foundation.forms.impl.MailServlet
+  service.pid = com.day.cq.wcm.foundation.forms.impl.MailServlet.4d99eb63-60e8-494e-9d85-09de45522a1f
+  sling.servlet.resourceTypes = [foundation/components/form/start]
+  sling.servlet.selectors = mail
+
+PID = com.day.cq.wcm.foundation.forms.impl.MailServlet.80889fca-9817-41db-9276-04e44511090c
+  Factory PID = com.day.cq.wcm.foundation.forms.impl.MailServlet
+  BundleLocation = Unbound
+  resource.blacklist = [/content/usergenerated]
+  resource.whitelist = [/content, /home]
+  service.description = Core Form Mail Servlet
+  service.factoryPid = com.day.cq.wcm.foundation.forms.impl.MailServlet
+  service.pid = com.day.cq.wcm.foundation.forms.impl.MailServlet.80889fca-9817-41db-9276-04e44511090c
+  sling.servlet.resourceTypes = [core/wcm/components/form/container/v1/container]
+  sling.servlet.selectors = mail
+
+PID = com.day.cq.wcm.foundation.forms.impl.MailServlet.acb3292b-31df-48c6-8b76-e94414cea586
+  Factory PID = com.day.cq.wcm.foundation.forms.impl.MailServlet
+  BundleLocation = Unbound
+  resource.blacklist = [/content/usergenerated]
+  resource.whitelist = [/content, /home]
+  service.description = We.Retail Form Mail Servlet
+  service.factoryPid = com.day.cq.wcm.foundation.forms.impl.MailServlet
+  service.pid = com.day.cq.wcm.foundation.forms.impl.MailServlet.acb3292b-31df-48c6-8b76-e94414cea586
+  sling.servlet.resourceTypes = [weretail/components/form/container]
+  sling.servlet.selectors = mail
+
+PID = com.day.cq.wcm.foundation.security.impl.SaferSlingPostValidatorImpl
+  BundleLocation = Unbound
+  operation.whitelist.prefixes = [social:]
+  parameter.whitelist = [rep:userId, rep:password, rep:password_confirm, ../cq:authorizableCategory]
+  parameter.whitelist.prefixes = [dc:, xmpRights:]
+  service.pid = com.day.cq.wcm.foundation.security.impl.SaferSlingPostValidatorImpl
+
+PID = com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider.0afa8a0c-2978-4702-bb0e-6095109117f7
+  Factory PID = com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider
+  BundleLocation = Unbound
+  README = Activates the layouting functionality for the page type
+  mobile.resourceTypes = [wcm/foundation/components/page]
+  service.factoryPid = com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider
+  service.pid = com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider.0afa8a0c-2978-4702-bb0e-6095109117f7
+
+PID = com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider.26faff7c-d937-4820-b95b-7a65fae277c2
+  Factory PID = com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider
+  BundleLocation = Unbound
+  README = Use these configuration settings to indicate which Experience Manager Mobile resource types should be supported by the mobile emulators.
+  mobile.resourceTypes = [we-unlimited-app/components/pages/page, we-unlimited-app/components/pages/issue]
+  service.factoryPid = com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider
+  service.pid = com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider.26faff7c-d937-4820-b95b-7a65fae277c2
+
+PID = com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider.6902c050-4006-45b6-a10b-3bb6c34de2af
+  Factory PID = com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider
+  BundleLocation = Unbound
+  README = Mobile Emulator available for these page types.
+  mobile.resourceTypes = [fd/af/themes/components/themesui, fd/af/components/page/base, fd/af/components/page2/aftemplatedpage]
+  service.factoryPid = com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider
+  service.pid = com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider.6902c050-4006-45b6-a10b-3bb6c34de2af
+
+PID = com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider.6b2ae670-73c2-43d2-9452-32ace393d180
+  Factory PID = com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider
+  BundleLocation = Unbound
+  README = Indicate which page resource types should display the mobile emulators.
+  mobile.resourceTypes = [weretail/components/structure/page]
+  service.factoryPid = com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider
+  service.pid = com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider.6b2ae670-73c2-43d2-9452-32ace393d180
+
+PID = com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider.706767ae-5f90-44f1-a1ba-18cd4a408c30
+  Factory PID = com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider
+  BundleLocation = Unbound
+  README = Activates the responsive emulator functionality for the We.Retail client app
+  mobile.resourceTypes = [we-retail-client-app/components/structure/ionic-tab-page]
+  service.factoryPid = com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider
+  service.pid = com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider.706767ae-5f90-44f1-a1ba-18cd4a408c30
+
+PID = com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider.778a17bd-841d-4558-85a9-166e5dd9778f
+  Factory PID = com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider
+  BundleLocation = Unbound
+  README = Activates the layouting functionality for screens
+  mobile.resourceTypes = [screens/core/components/multiscreenchannel]
+  service.factoryPid = com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider
+  service.pid = com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider.778a17bd-841d-4558-85a9-166e5dd9778f
+
+PID = com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider.f80fa4f2-cb39-4c81-8ae1-dc56d710840c
+  Factory PID = com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider
+  BundleLocation = Unbound
+  README = Use these configuration settings to indicate which resource types should be supported by the mobile emulators.
+  mobile.resourceTypes = [/libs/social/console/components/basepage, social/console/components/basepage]
+  service.factoryPid = com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider
+  service.pid = com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider.f80fa4f2-cb39-4c81-8ae1-dc56d710840c
+
+PID = com.day.cq.wcm.mobile.core.impl.device.DeviceInfoTransformerFactory
+  BundleLocation = Unbound
+  device.info.transformer.enabled = true
+  service.pid = com.day.cq.wcm.mobile.core.impl.device.DeviceInfoTransformerFactory
+
+PID = com.day.cq.wcm.mobile.core.impl.redirect.RedirectFilter
+  BundleLocation = Unbound
+  redirect.enabled = false
+  redirect.stats.enabled = false
+  service.pid = com.day.cq.wcm.mobile.core.impl.redirect.RedirectFilter
+
+PID = com.day.cq.wcm.msm.impl.RolloutManagerImpl
+  BundleLocation = Unbound
+  configured =
+  service.pid = com.day.cq.wcm.msm.impl.RolloutManagerImpl
+
+PID = com.day.cq.wcm.msm.impl.actions.ContentCopyActionFactory
+  BundleLocation = Unbound
+  cq.wcm.msm.action.excludednodetypes = [cq:LiveSyncConfig, cq:BlueprintSyncConfig, cq:CatalogSyncConfig, cq:meta]
+  cq.wcm.msm.action.excludedparagraphitems = [cq:annotations]
+  cq.wcm.msm.action.excludedprops = [[^.], cq:authorExternalId, publishCampaignId, cq:publishExternalId, cq:xfMasterVariation]
+  service.pid = com.day.cq.wcm.msm.impl.actions.ContentCopyActionFactory
+
+PID = com.day.cq.wcm.msm.impl.actions.ContentDeleteActionFactory
+  BundleLocation = Unbound
+  cq.wcm.msm.action.excludednodetypes = [cq:LiveSyncConfig, cq:BlueprintSyncConfig, cq:LiveSyncAction, cq:CatalogSyncConfig, cq:CatalogSyncAction, cq:meta]
+  cq.wcm.msm.action.excludedparagraphitems = [cq:propertyInheritanceCancelled]
+  cq.wcm.msm.action.excludedprops = [jcr:.*, sling:.*, cq:.*]
+  service.pid = com.day.cq.wcm.msm.impl.actions.ContentDeleteActionFactory
+
+PID = com.day.cq.wcm.msm.impl.actions.ContentUpdateActionFactory
+  BundleLocation = Unbound
+  cq.wcm.msm.action.excludednodetypes = [cq:LiveSyncConfig, cq:BlueprintSyncConfig, cq:LiveSyncAction, cq:CatalogSyncConfig, cq:CatalogSyncAction, cq:meta]
+  cq.wcm.msm.action.excludedparagraphitems = [cq:propertyInheritanceCancelled]
+  cq.wcm.msm.action.excludedprops = [jcr:.*, sling:(?!(resourceType|resourceSuperType)$).*, cq:(?!(designPath|template|lastTranslationUpdate|targetEngine)$).*, publishCampaignId]
+  service.pid = com.day.cq.wcm.msm.impl.actions.ContentUpdateActionFactory
+
+PID = com.day.cq.wcm.msm.impl.actions.OrderChildrenActionFactory
+  BundleLocation = Unbound
+  cq.wcm.msm.action.excludednodetypes = [cq:LiveSyncConfig, cq:BlueprintSyncConfig, cq:LiveSyncAction, cq:meta]
+  cq.wcm.msm.action.excludedparagraphitems = [cq:propertyInheritanceCancelled]
+  cq.wcm.msm.action.excludedprops = [jcr:.*, sling:.*, cq:.*]
+  service.pid = com.day.cq.wcm.msm.impl.actions.OrderChildrenActionFactory
+
+PID = com.day.cq.wcm.msm.impl.actions.ReferencesUpdateActionFactory
+  BundleLocation = Unbound
+  cq.wcm.msm.action.excludednodetypes = [cq:LiveSyncConfig, cq:BlueprintSyncConfig, cq:LiveSyncAction, cq:meta]
+  cq.wcm.msm.action.excludedparagraphitems = [cq:propertyInheritanceCancelled]
+  cq.wcm.msm.action.excludedprops = [jcr:.*, sling:.*, cq:.*]
+  service.pid = com.day.cq.wcm.msm.impl.actions.ReferencesUpdateActionFactory
+
+PID = com.day.cq.wcm.msm.impl.actions.VersionCopyActionFactory
+  BundleLocation = Unbound
+  cq.wcm.msm.action.excludednodetypes = [cq:LiveSyncConfig, cq:BlueprintSyncConfig, cq:LiveSyncAction, cq:meta]
+  cq.wcm.msm.action.excludedparagraphitems = [cq:propertyInheritanceCancelled]
+  cq.wcm.msm.action.excludedprops = [jcr:.*, sling:.*, cq:.*]
+  service.pid = com.day.cq.wcm.msm.impl.actions.VersionCopyActionFactory
+
+PID = com.day.cq.wcm.notification.impl.NotificationManagerImpl
+  BundleLocation = Unbound
+  event.topics = [com/day/cq/wcm/core/page, com/day/cq/replication, com/adobe/cq/social/forum, com/day/cq/collab/forum, com/adobe/cq/social/forum/digest, com/adobe/cq/social/forumlevel/digest]
+  service.pid = com.day.cq.wcm.notification.impl.NotificationManagerImpl
+
+PID = com.day.cq.wcm.undo.UndoConfig
+  BundleLocation = Unbound
+  cq.wcm.undo.blacklist = [foundation/components/form/start:removeParagraph, collab/forum/components/topic:insertParagraph, collab/forum/components/topic:removeParagraph, collab/forum/components/post:insertParagraph, collab/forum/components/post:removeParagraph, foundation/components/form/address:updateParagraph, foundation/components/form/checkbox:updateParagraph, foundation/components/form/dropdown:updateParagraph, foundation/components/form/captcha:updateParagraph, foundation/components/form/image:updateParagraph, foundation/components/form/imagebutton:updateParagraph, foundation/components/form/text:updateParagraph, foundation/components/form/upload:updateParagraph, foundation/components/form/link:updateParagraph, foundation/components/form/tags:updateParagraph, foundation/components/form/password:updateParagraph, foundation/components/form/radio:updateParagraph, collab/blog/components/break, collab/calendar/components/calendar:removeParagraph, collab/calendar/components/event:updateParagraph, collab/calendar/components/lenses/agenda:removeParagraph, collab/calendar/components/lenses/month:removeParagraph]
+  cq.wcm.undo.whitelist = [foundation/components/text, foundation/components/download, foundation/components/image, foundation/components/slideshow, foundation/components/textimage, foundation/components/title, foundation/components/chart, foundation/components/external, foundation/components/flash, foundation/components/login, foundation/components/mvt, foundation/components/reference, foundation/components/search, foundation/components/sitemap, foundation/components/slideshow, foundation/components/table, foundation/components/video, foundation/components/carousel, foundation/components/mobileimage, foundation/components/mobilelist, foundation/components/mobilereference, foundation/components/mobiletextimage, foundation/components/account/passwordreset, foundation/components/form/start, foundation/components/form/address, foundation/components/form/checkbox, foundation/components/form/dropdown, foundation/components/form/hidden, foundation/components/form/captcha, foundation/components/form/image, foundation/components/form/imagebutton, foundation/components/form/password, foundation/components/form/radio, foundation/components/form/submit, foundation/components/form/text, foundation/components/form/upload, foundation/components/form/link, foundation/components/form/tags, foundation/components/account/accountname, cq/tagging/components/tagcloud, collab/forum/components/topic, collab/forum/components/post, collab/forum/components/forum, collab/commons/components/comments, collab/blog/components/archive, collab/blog/components/authors, collab/blog/components/categories, collab/blog/components/pages, collab/blog/components/search, collab/blog/components/workflow/blogsearchpingprocess, collab/blog/components/workflow/checkspamprocess, collab/forum/components/search, collab/forum/components/workflow/forumsubscribeprocess, collab/calendar/components/exportlink, collab/calendar/components/form/eventbasics, collab/calendar/components/form/icslink, collab/calendar/components/form/organizer, collab/calendar/components/form/pushworkflow, collab/calendar/components/form/recurrence, collab/calendar/components/workflow/calendarsubscriptionprocess, collab/commons/components/feedlink, collab/commons/components/toggle, collab/commons/components/ratings, cq/workflow/components/form/workflow_submit, fd/af/components/actions/nextitemnav, fd/af/components/actions/previtemnav, fd/af/components/actions/submit, fd/af/components/actions/reset, fd/af/components/guidebutton, fd/af/components/guidechart, fd/af/components/guidecheckbox, fd/af/components/guidedateinput, fd/af/components/guidedatepicker, fd/af/components/guidedropdownlist, fd/af/components/guidefileupload, fd/af/components/guideimage, fd/af/components/guideimagechoice, fd/af/components/guidenumericbox, fd/af/components/guidenumericstepper, fd/af/components/guidepasswordbox, fd/af/components/guideradiobutton, fd/af/components/guideseparator, fd/af/components/guidescribble, fd/af/components/guideswitch, fd/af/components/guidetermsandconditions, fd/af/components/guidetextbox, fd/af/components/guidetextdraw, fd/af/components/table, fd/af/components/toolbar, fd/af/components/panel, fd/afaddon/components/adobeSignBlock, fd/afaddon/components/esign, fd/afaddon/components/echosign, fd/afaddon/components/summary, fd/afaddon/components/verify, fd/af/components/aemform, fd/af/components/actions/fileattachmentlisting, fd/af/components/guideCaptcha, fd/af/components/guideContainer, fd/af/components/guideContainerWrapper, fd/af/components/guideemail, fd/af/components/guidefield, fd/af/components/guidefooter, fd/af/components/guideformtitle, fd/af/components/guideFragmentContainer, fd/af/components/guideheader, fd/af/components/guidePage, fd/af/components/guideseperator, fd/af/components/guidetelephone, fd/af/components/rootPanel, fd/af/components/tableHeader, fd/af/components/tableRow, fd/afaddon/components/actions/emailpdf, fd/afaddon/components/actions/lcprocess, fd/afaddon/components/actions/storepdf, fd/adaddon/components/guideAdModule, fd/adaddon/components/guideAdModuleGroup, fd/fp/components/actions/saveGuideDraft, fd/af/components/afFormTitle]
+  service.pid = com.day.cq.wcm.undo.UndoConfig
+
+PID = com.day.cq.widget.impl.WidgetExtensionProviderImpl
+  BundleLocation = Unbound
+  extendable.widgets = [contentfinder, workflow-inbox]
+  service.pid = com.day.cq.widget.impl.WidgetExtensionProviderImpl
+
+PID = com.day.crx.security.token.impl.impl.TokenAuthenticationHandler
+  BundleLocation = Unbound
+  service.pid = com.day.crx.security.token.impl.impl.TokenAuthenticationHandler
+  token.required.attr = none
+
+PID = org.apache.aries.jmx.framework.StateConfig
+  BundleLocation = launchpad:resources/install/2/org.apache.aries.jmx.core-1.1.5.jar
+  attributeChangeNotificationEnabled = false
+  service.pid = org.apache.aries.jmx.framework.StateConfig
+
+PID = org.apache.felix.eventadmin.impl.EventAdmin
+  BundleLocation = launchpad:resources/install/4/org.apache.felix.eventadmin-1.4.8.jar
+  org.apache.felix.eventadmin.IgnoreTimeout = [org.apache.felix*, org.apache.sling*, com.day*, com.adobe*]
+  service.pid = org.apache.felix.eventadmin.impl.EventAdmin
+
+PID = org.apache.felix.http
+  BundleLocation = launchpad:resources/install/5/org.apache.felix.http.jetty-3.4.0-B002.jar
+  org.apache.felix.http.session.timeout = 10
+  org.apache.felix.https.jetty.protocols.excluded = [SSLv3]
+  org.apache.felix.proxy.load.balancer.connection.enable = true
+  service.pid = org.apache.felix.http
+
+PID = org.apache.felix.jaas.Configuration.factory.26d8988a-f6ea-43e6-92cd-39fb4f4430b6
+  Factory PID = org.apache.felix.jaas.Configuration.factory
+  BundleLocation = launchpad:resources/install.crx3/9/org.apache.felix.jaas-1.0.2.jar
+  jaas.classname = org.apache.jackrabbit.oak.spi.security.authentication.GuestLoginModule
+  jaas.controlFlag = optional
+  jaas.options = []
+  jaas.ranking = 300
+  jaas.realmName =
+  service.factoryPid = org.apache.felix.jaas.Configuration.factory
+  service.pid = org.apache.felix.jaas.Configuration.factory.26d8988a-f6ea-43e6-92cd-39fb4f4430b6
+
+PID = org.apache.felix.jaas.Configuration.factory.c38fbedd-d1df-4335-96bc-38e4bbac93de
+  Factory PID = org.apache.felix.jaas.Configuration.factory
+  BundleLocation = launchpad:resources/install.crx3/9/org.apache.felix.jaas-1.0.2.jar
+  jaas.classname = org.apache.jackrabbit.oak.security.authentication.user.LoginModuleImpl
+  jaas.controlFlag = sufficient
+  jaas.options = []
+  jaas.ranking = 100
+  jaas.realmName =
+  service.factoryPid = org.apache.felix.jaas.Configuration.factory
+  service.pid = org.apache.felix.jaas.Configuration.factory.c38fbedd-d1df-4335-96bc-38e4bbac93de
+
+PID = org.apache.felix.jaas.Configuration.factory.e7731291-019b-4988-be92-80ddd77e7b97
+  Factory PID = org.apache.felix.jaas.Configuration.factory
+  BundleLocation = launchpad:resources/install.crx3/9/org.apache.felix.jaas-1.0.2.jar
+  jaas.classname = org.apache.jackrabbit.oak.security.authentication.token.TokenLoginModule
+  jaas.controlFlag = sufficient
+  jaas.options = []
+  jaas.ranking = 200
+  jaas.realmName =
+  service.factoryPid = org.apache.felix.jaas.Configuration.factory
+  service.pid = org.apache.felix.jaas.Configuration.factory.e7731291-019b-4988-be92-80ddd77e7b97
+
+PID = org.apache.felix.jaas.ConfigurationSpi
+  BundleLocation = launchpad:resources/install.crx3/9/org.apache.felix.jaas-1.0.2.jar
+  jaas.configProviderName = FelixJaasProvider
+  jaas.defaultRealmName = jackrabbit.oak
+  jaas.globalConfigPolicy = proxy
+  service.pid = org.apache.felix.jaas.ConfigurationSpi
+
+PID = org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore
+  BundleLocation = Unbound
+  path = crx-quickstart/repository/datastore
+  service.pid = org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore
+
+PID = org.apache.jackrabbit.oak.plugins.index.AsyncIndexerService
+  BundleLocation = Unbound
+  asyncConfigs = [async:5, fulltext-async:5]
+  service.pid = org.apache.jackrabbit.oak.plugins.index.AsyncIndexerService
+
+PID = org.apache.jackrabbit.oak.plugins.index.lucene.LuceneIndexProviderService
+  BundleLocation = Unbound
+  enableCopyOnReadSupport = true
+  service.pid = org.apache.jackrabbit.oak.plugins.index.lucene.LuceneIndexProviderService
+
+PID = org.apache.jackrabbit.oak.plugins.observation.ChangeCollectorProvider
+  BundleLocation = Unbound
+  enabled = true
+  service.pid = org.apache.jackrabbit.oak.plugins.observation.ChangeCollectorProvider
+
+PID = org.apache.jackrabbit.oak.security.authentication.token.TokenConfigurationImpl
+  BundleLocation = Unbound
+  passwordHashIterations = 1
+  service.pid = org.apache.jackrabbit.oak.security.authentication.token.TokenConfigurationImpl
+  tokenExpiration = 43200000
+  tokenLength = 8
+  tokenRefresh = false
+
+PID = org.apache.jackrabbit.oak.security.authorization.AuthorizationConfigurationImpl
+  BundleLocation = Unbound
+  administrativePrincipals = [administrators]
+  importBehavior = besteffort
+  service.pid = org.apache.jackrabbit.oak.security.authorization.AuthorizationConfigurationImpl
+
+PID = org.apache.jackrabbit.oak.security.internal.SecurityProviderRegistration
+  BundleLocation = Unbound
+  requiredServicePids = [org.apache.jackrabbit.oak.security.authorization.AuthorizationConfigurationImpl, org.apache.jackrabbit.oak.security.principal.PrincipalConfigurationImpl, org.apache.jackrabbit.oak.security.authentication.token.TokenConfigurationImpl, org.apache.jackrabbit.oak.spi.security.user.action.DefaultAuthorizableActionProvider, org.apache.jackrabbit.oak.security.authorization.restriction.RestrictionProviderImpl, org.apache.jackrabbit.oak.security.user.RandomAuthorizableNodeName, org.apache.jackrabbit.oak.security.user.UserAuthenticationFactoryImpl, org.apache.jackrabbit.oak.spi.security.authorization.cug.impl.CugConfiguration, org.apache.jackrabbit.oak.spi.security.authentication.external.impl.principal.ExternalPrincipalConfiguration]
+  service.pid = org.apache.jackrabbit.oak.security.internal.SecurityProviderRegistration
+
+PID = org.apache.jackrabbit.oak.security.user.RandomAuthorizableNodeName
+  BundleLocation = Unbound
+  length = 20
+  service.pid = org.apache.jackrabbit.oak.security.user.RandomAuthorizableNodeName
+
+PID = org.apache.jackrabbit.oak.security.user.UserConfigurationImpl
+  BundleLocation = Unbound
+  defaultDepth = 1
+  groupsPath = /home/groups
+  importBehavior = besteffort
+  service.pid = org.apache.jackrabbit.oak.security.user.UserConfigurationImpl
+  usersPath = /home/users
+
+PID = org.apache.jackrabbit.oak.segment.SegmentNodeStoreService
+  BundleLocation = Unbound
+  customBlobStore = true
+  host = localhost
+  name = Oak-Segment-Tar
+  service.pid = org.apache.jackrabbit.oak.segment.SegmentNodeStoreService
+  service.ranking = 100
+
+PID = org.apache.jackrabbit.oak.spi.security.authorization.cug.impl.CugConfiguration
+  BundleLocation = Unbound
+  cugEnabled = false
+  cugSupportedPaths = [/content]
+  service.pid = org.apache.jackrabbit.oak.spi.security.authorization.cug.impl.CugConfiguration
+
+PID = org.apache.jackrabbit.oak.spi.security.user.action.DefaultAuthorizableActionProvider
+  BundleLocation = Unbound
+  enabledActions = [org.apache.jackrabbit.oak.spi.security.user.action.AccessControlAction]
+  groupPrivilegeNames = [jcr:read]
+  service.pid = org.apache.jackrabbit.oak.spi.security.user.action.DefaultAuthorizableActionProvider
+  userPrivilegeNames = [jcr:all]
+
+PID = org.apache.sling.caconfig.impl.ConfigurationResolverImpl
+  BundleLocation = Unbound
+  configBucketNames = [settings]
+  service.pid = org.apache.sling.caconfig.impl.ConfigurationResolverImpl
+
+PID = org.apache.sling.caconfig.resource.impl.def.DefaultConfigurationResourceResolvingStrategy
+  BundleLocation = Unbound
+  configCollectionInheritancePropertyNames = [jcr:content/mergeList, mergeList]
+  fallbackPaths = [/conf/global, /apps, /libs]
+  service.pid = org.apache.sling.caconfig.resource.impl.def.DefaultConfigurationResourceResolvingStrategy
+
+PID = org.apache.sling.caconfig.resource.impl.def.DefaultContextPathStrategy
+  BundleLocation = Unbound
+  configRefPropertyNames = cq:conf
+  configRefResourceNames = [jcr:content, .]
+  service.pid = org.apache.sling.caconfig.resource.impl.def.DefaultContextPathStrategy
+
+PID = org.apache.sling.commons.log.LogManager
+  BundleLocation = slinginstall:D:\cq_servers\aem-6.3\author\crx-quickstart\launchpad\startup\1\org.apache.sling.commons.log-5.0.0.jar
+  org.apache.sling.commons.log.file = logs/error.log
+  org.apache.sling.commons.log.file.number = 7
+  org.apache.sling.commons.log.file.size = '.'yyyy-MM-dd
+  org.apache.sling.commons.log.level = info
+  org.apache.sling.commons.log.numOfLines = 10000
+  org.apache.sling.commons.log.pattern = {0,date,dd.MM.yyyy HH:mm:ss.SSS} *{4}* [{2}] {3} {5}
+  service.pid = org.apache.sling.commons.log.LogManager
+
+PID = org.apache.sling.commons.log.LogManager.factory.config.009b78de-c58e-421e-98e1-d112409d3d97
+  Factory PID = org.apache.sling.commons.log.LogManager.factory.config
+  BundleLocation = slinginstall:D:\cq_servers\aem-6.3\author\crx-quickstart\launchpad\startup\1\org.apache.sling.commons.log-5.0.0.jar
+  org.apache.sling.commons.log.file = logs/access.log
+  org.apache.sling.commons.log.level = info
+  org.apache.sling.commons.log.names = [log.access]
+  org.apache.sling.commons.log.pattern = {5}
+  service.factoryPid = org.apache.sling.commons.log.LogManager.factory.config
+  service.pid = org.apache.sling.commons.log.LogManager.factory.config.009b78de-c58e-421e-98e1-d112409d3d97
+
+PID = org.apache.sling.commons.log.LogManager.factory.config.1fb7f1dd-225b-4678-9f6e-18b23770d538
+  Factory PID = org.apache.sling.commons.log.LogManager.factory.config
+  BundleLocation = slinginstall:D:\cq_servers\aem-6.3\author\crx-quickstart\launchpad\startup\1\org.apache.sling.commons.log-5.0.0.jar
+  org.apache.sling.commons.log.file = logs/audit.log
+  org.apache.sling.commons.log.level = info
+  org.apache.sling.commons.log.names = [org.apache.jackrabbit.core.audit, org.apache.jackrabbit.oak.audit]
+  org.apache.sling.commons.log.pattern = {0,date,dd.MM.yyyy HH:mm:ss.SSS} {5}
+  service.factoryPid = org.apache.sling.commons.log.LogManager.factory.config
+  service.pid = org.apache.sling.commons.log.LogManager.factory.config.1fb7f1dd-225b-4678-9f6e-18b23770d538
+
+PID = org.apache.sling.commons.log.LogManager.factory.config.620abed5-5177-46dd-8917-eddb17621787
+  Factory PID = org.apache.sling.commons.log.LogManager.factory.config
+  BundleLocation = slinginstall:D:\cq_servers\aem-6.3\author\crx-quickstart\launchpad\startup\1\org.apache.sling.commons.log-5.0.0.jar
+  org.apache.sling.commons.log.file = logs/upgrade.log
+  org.apache.sling.commons.log.level = info
+  org.apache.sling.commons.log.names = [com.day.cq.compat.codeupgrade, com.adobe.cq.upgradesexecutor, com.adobe.cq.upgrades]
+  org.apache.sling.commons.log.pattern = {0,date,dd.MM.yyyy HH:mm:ss.SSS} *{4}* [{2}] {3} {5}
+  service.factoryPid = org.apache.sling.commons.log.LogManager.factory.config
+  service.pid = org.apache.sling.commons.log.LogManager.factory.config.620abed5-5177-46dd-8917-eddb17621787
+
+PID = org.apache.sling.commons.log.LogManager.factory.config.6ab03c11-c8c7-4787-8efe-2c65129571ba
+  Factory PID = org.apache.sling.commons.log.LogManager.factory.config
+  BundleLocation = slinginstall:D:\cq_servers\aem-6.3\author\crx-quickstart\launchpad\startup\1\org.apache.sling.commons.log-5.0.0.jar
+  org.apache.sling.commons.log.file = logs/error.log
+  org.apache.sling.commons.log.level = error
+  org.apache.sling.commons.log.names = [org.apache.sling.scripting.sightly.js.impl.jsapi.ProxyAsyncScriptableFactory]
+  org.apache.sling.commons.log.pattern = {0,date,dd.MM.yyyy HH:mm:ss.SSS} *{4}* [{2}] {3} {5}
+  service.factoryPid = org.apache.sling.commons.log.LogManager.factory.config
+  service.pid = org.apache.sling.commons.log.LogManager.factory.config.6ab03c11-c8c7-4787-8efe-2c65129571ba
+
+PID = org.apache.sling.commons.log.LogManager.factory.config.96543c50-8785-4737-a98d-947e5c926b35
+  Factory PID = org.apache.sling.commons.log.LogManager.factory.config
+  BundleLocation = slinginstall:D:\cq_servers\aem-6.3\author\crx-quickstart\launchpad\startup\1\org.apache.sling.commons.log-5.0.0.jar
+  org.apache.sling.commons.log.file = logs/auditlog.log
+  org.apache.sling.commons.log.level = debug
+  org.apache.sling.commons.log.names = [com.adobe.granite.audit]
+  org.apache.sling.commons.log.pattern = {0,date,dd.MM.yyyy HH:mm:ss.SSS} {5}
+  service.factoryPid = org.apache.sling.commons.log.LogManager.factory.config
+  service.pid = org.apache.sling.commons.log.LogManager.factory.config.96543c50-8785-4737-a98d-947e5c926b35
+
+PID = org.apache.sling.commons.log.LogManager.factory.config.b0c0e4d8-b139-41ac-a3d1-1def139c90b6
+  Factory PID = org.apache.sling.commons.log.LogManager.factory.config
+  BundleLocation = slinginstall:D:\cq_servers\aem-6.3\author\crx-quickstart\launchpad\startup\1\org.apache.sling.commons.log-5.0.0.jar
+  org.apache.sling.commons.log.file = logs/history.log
+  org.apache.sling.commons.log.level = info
+  org.apache.sling.commons.log.names = [log.history]
+  org.apache.sling.commons.log.pattern = {0,date,dd.MM.yyyy HH:mm:ss} {1} {5}
+  service.factoryPid = org.apache.sling.commons.log.LogManager.factory.config
+  service.pid = org.apache.sling.commons.log.LogManager.factory.config.b0c0e4d8-b139-41ac-a3d1-1def139c90b6
+
+PID = org.apache.sling.commons.log.LogManager.factory.config.b4578fce-0d1c-4fd9-9c8a-63c260b6174b
+  Factory PID = org.apache.sling.commons.log.LogManager.factory.config
+  BundleLocation = slinginstall:D:\cq_servers\aem-6.3\author\crx-quickstart\launchpad\startup\1\org.apache.sling.commons.log-5.0.0.jar
+  org.apache.sling.commons.log.file = logs/request.log
+  org.apache.sling.commons.log.level = info
+  org.apache.sling.commons.log.names = [log.request]
+  org.apache.sling.commons.log.pattern = {5}
+  service.factoryPid = org.apache.sling.commons.log.LogManager.factory.config
+  service.pid = org.apache.sling.commons.log.LogManager.factory.config.b4578fce-0d1c-4fd9-9c8a-63c260b6174b
+
+PID = org.apache.sling.commons.log.LogManager.factory.config.bce57140-7da8-4f72-adbd-812f4b98e6cc
+  Factory PID = org.apache.sling.commons.log.LogManager.factory.config
+  BundleLocation = slinginstall:D:\cq_servers\aem-6.3\author\crx-quickstart\launchpad\startup\1\org.apache.sling.commons.log-5.0.0.jar
+  org.apache.sling.commons.log.file = logs/project-we-retail.log
+  org.apache.sling.commons.log.level = info
+  org.apache.sling.commons.log.names = [we.retail]
+  org.apache.sling.commons.log.pattern = {0,date,yyyy-MM-dd HH:mm:ss.SSS} {4} [{3}] {5}
+  service.factoryPid = org.apache.sling.commons.log.LogManager.factory.config
+  service.pid = org.apache.sling.commons.log.LogManager.factory.config.bce57140-7da8-4f72-adbd-812f4b98e6cc
+
+PID = org.apache.sling.commons.log.LogManager.factory.writer.a7b151ad-eea6-4c15-84c5-d1272551e550
+  Factory PID = org.apache.sling.commons.log.LogManager.factory.writer
+  BundleLocation = slinginstall:D:\cq_servers\aem-6.3\author\crx-quickstart\launchpad\startup\1\org.apache.sling.commons.log-5.0.0.jar
+  org.apache.sling.commons.log.file = logs/upgrade.log
+  org.apache.sling.commons.log.file.number = 5
+  org.apache.sling.commons.log.file.size = '.'yyyy-MM-dd
+  service.factoryPid = org.apache.sling.commons.log.LogManager.factory.writer
+  service.pid = org.apache.sling.commons.log.LogManager.factory.writer.a7b151ad-eea6-4c15-84c5-d1272551e550
+
+PID = org.apache.sling.commons.mime.internal.MimeTypeServiceImpl
+  BundleLocation = Unbound
+  mime.types = [application/vnd.apple.keynote key, video/webm webm, video/x-matroska mkv, video/dvd vob, text/vtt vtt, application/x-indesign-snippet idms]
+  service.pid = org.apache.sling.commons.mime.internal.MimeTypeServiceImpl
+
+PID = org.apache.sling.commons.scheduler.impl.QuartzScheduler
+  BundleLocation = Unbound
+  allowedPoolNames = [oak, cq-polling-importer]
+  service.pid = org.apache.sling.commons.scheduler.impl.QuartzScheduler
+
+PID = org.apache.sling.commons.threads.impl.DefaultThreadPool.factory.46c597f7-bbca-42b5-9822-51939bf89d37
+  Factory PID = org.apache.sling.commons.threads.impl.DefaultThreadPool.factory
+  BundleLocation = launchpad:resources/install/15/org.apache.sling.commons.threads-3.2.6.jar
+  maxPoolSize = 10
+  minPoolSize = 0
+  name = cq-polling-importer
+  service.factoryPid = org.apache.sling.commons.threads.impl.DefaultThreadPool.factory
+  service.pid = org.apache.sling.commons.threads.impl.DefaultThreadPool.factory.46c597f7-bbca-42b5-9822-51939bf89d37
+
+PID = org.apache.sling.commons.threads.impl.DefaultThreadPool.factory.a0fc4619-6e21-49ad-9454-024c532d546a
+  Factory PID = org.apache.sling.commons.threads.impl.DefaultThreadPool.factory
+  BundleLocation = launchpad:resources/install/15/org.apache.sling.commons.threads-3.2.6.jar
+  maxPoolSize = 20
+  minPoolSize = 20
+  name = oak-observation
+  service.factoryPid = org.apache.sling.commons.threads.impl.DefaultThreadPool.factory
+  service.pid = org.apache.sling.commons.threads.impl.DefaultThreadPool.factory.a0fc4619-6e21-49ad-9454-024c532d546a
+
+PID = org.apache.sling.commons.threads.impl.DefaultThreadPool.factory.d05da1df-4ae7-4e2b-bdb2-fff25c90328d
+  Factory PID = org.apache.sling.commons.threads.impl.DefaultThreadPool.factory
+  BundleLocation = launchpad:resources/install/15/org.apache.sling.commons.threads-3.2.6.jar
+  maxPoolSize = 5
+  minPoolSize = 1
+  name = oak
+  service.factoryPid = org.apache.sling.commons.threads.impl.DefaultThreadPool.factory
+  service.pid = org.apache.sling.commons.threads.impl.DefaultThreadPool.factory.d05da1df-4ae7-4e2b-bdb2-fff25c90328d
+
+PID = org.apache.sling.discovery.oak.Config
+  BundleLocation = Unbound
+  connectorPingTimeout = 300
+  service.pid = org.apache.sling.discovery.oak.Config
+  topologyConnectorUrls = [http://localhost:4502/libs/sling/topology/connector]
+
+PID = org.apache.sling.distribution.agent.impl.ForwardDistributionAgentFactory.695480a2-f750-405f-8839-f5e74b458a0d
+  Factory PID = org.apache.sling.distribution.agent.impl.ForwardDistributionAgentFactory
+  BundleLocation = Unbound
+  details = Publish agent to push data from author to publishers
+  enabled = true
+  name = publish
+  packageImporter.endpoints = [endpoint0=http://localhost:4503/libs/sling/distribution/services/importers/default]
+  queue.processing.enabled = true
+  service.factoryPid = org.apache.sling.distribution.agent.impl.ForwardDistributionAgentFactory
+  service.pid = org.apache.sling.distribution.agent.impl.ForwardDistributionAgentFactory.695480a2-f750-405f-8839-f5e74b458a0d
+  title = Publish Agent
+
+PID = org.apache.sling.distribution.agent.impl.PrivilegeDistributionRequestAuthorizationStrategyFactory.5e85d5fc-86b8-41ec-ac83-f7b6d55b02e1
+  Factory PID = org.apache.sling.distribution.agent.impl.PrivilegeDistributionRequestAuthorizationStrategyFactory
+  BundleLocation = Unbound
+  jcrPrivilege = crx:replicate
+  name = privilegeReplicate
+  service.factoryPid = org.apache.sling.distribution.agent.impl.PrivilegeDistributionRequestAuthorizationStrategyFactory
+  service.pid = org.apache.sling.distribution.agent.impl.PrivilegeDistributionRequestAuthorizationStrategyFactory.5e85d5fc-86b8-41ec-ac83-f7b6d55b02e1
+
+PID = org.apache.sling.distribution.agent.impl.PrivilegeDistributionRequestAuthorizationStrategyFactory.ecf6e422-ebf1-45ed-b051-a63e389dcfdc
+  Factory PID = org.apache.sling.distribution.agent.impl.PrivilegeDistributionRequestAuthorizationStrategyFactory
+  BundleLocation = Unbound
+  jcrPrivilege = crx:replicate
+  name = default
+  service.factoryPid = org.apache.sling.distribution.agent.impl.PrivilegeDistributionRequestAuthorizationStrategyFactory
+  service.pid = org.apache.sling.distribution.agent.impl.PrivilegeDistributionRequestAuthorizationStrategyFactory.ecf6e422-ebf1-45ed-b051-a63e389dcfdc
+
+PID = org.apache.sling.distribution.agent.impl.SyncDistributionAgentFactory.5198fdd4-ac7b-4384-ba84-1a3cf6cb4073
+  Factory PID = org.apache.sling.distribution.agent.impl.SyncDistributionAgentFactory
+  BundleLocation = Unbound
+  details = Coordinating agent to synchronize social data between publishers
+  enabled = false
+  name = socialpubsync
+  packageBuilder.target = (name=socialpubsync-vlt)
+  packageExporter.endpoints = [http://localhost:4503/libs/sling/distribution/services/exporters/socialpubsync-reverse]
+  packageImporter.endpoints = [http://localhost:4503/libs/sling/distribution/services/importers/socialpubsync]
+  requestAuthorizationStrategy.target = (|(name=privilegeReplicate)(name=default))
+  service.factoryPid = org.apache.sling.distribution.agent.impl.SyncDistributionAgentFactory
+  service.pid = org.apache.sling.distribution.agent.impl.SyncDistributionAgentFactory.5198fdd4-ac7b-4384-ba84-1a3cf6cb4073
+  serviceName = socialpubsync-distributionService
+  title = Social Publisher Sync
+  transportSecretProvider.target = (name=socialpubsync-publishUser)
+  triggers.target = (name=socialpubsync-scheduled-trigger)
+  useMultipleQueues = true
+
+PID = org.apache.sling.distribution.resources.impl.DistributionConfigurationResourceProviderFactory.f40d5661-26e0-4b2c-a4fb-c7d7fe45609e
+  Factory PID = org.apache.sling.distribution.resources.impl.DistributionConfigurationResourceProviderFactory
+  BundleLocation = Unbound
+  kind = agent
+  provider.roots = [/libs/sling/distribution/settings/agents]
+  service.factoryPid = org.apache.sling.distribution.resources.impl.DistributionConfigurationResourceProviderFactory
+  service.pid = org.apache.sling.distribution.resources.impl.DistributionConfigurationResourceProviderFactory.f40d5661-26e0-4b2c-a4fb-c7d7fe45609e
+
+PID = org.apache.sling.distribution.resources.impl.DistributionServiceResourceProviderFactory.11c408c7-961a-499c-add2-7ec2f28051d7
+  Factory PID = org.apache.sling.distribution.resources.impl.DistributionServiceResourceProviderFactory
+  BundleLocation = Unbound
+  kind = agent
+  provider.roots = [/libs/sling/distribution/services/agents]
+  service.factoryPid = org.apache.sling.distribution.resources.impl.DistributionServiceResourceProviderFactory
+  service.pid = org.apache.sling.distribution.resources.impl.DistributionServiceResourceProviderFactory.11c408c7-961a-499c-add2-7ec2f28051d7
+
+PID = org.apache.sling.distribution.resources.impl.DistributionServiceResourceProviderFactory.45ea082f-0278-4562-92ff-a76dadf99265
+  Factory PID = org.apache.sling.distribution.resources.impl.DistributionServiceResourceProviderFactory
+  BundleLocation = Unbound
+  kind = importer
+  provider.roots = [/libs/sling/distribution/services/importers]
+  service.factoryPid = org.apache.sling.distribution.resources.impl.DistributionServiceResourceProviderFactory
+  service.pid = org.apache.sling.distribution.resources.impl.DistributionServiceResourceProviderFactory.45ea082f-0278-4562-92ff-a76dadf99265
+
+PID = org.apache.sling.distribution.resources.impl.DistributionServiceResourceProviderFactory.cf95405b-e705-447f-970d-e6c616bc9618
+  Factory PID = org.apache.sling.distribution.resources.impl.DistributionServiceResourceProviderFactory
+  BundleLocation = Unbound
+  kind = exporter
+  provider.roots = [/libs/sling/distribution/services/exporters]
+  service.factoryPid = org.apache.sling.distribution.resources.impl.DistributionServiceResourceProviderFactory
+  service.pid = org.apache.sling.distribution.resources.impl.DistributionServiceResourceProviderFactory.cf95405b-e705-447f-970d-e6c616bc9618
+
+PID = org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory.95ca0155-7758-4c3b-92e4-8738e4a0d646
+  Factory PID = org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory
+  BundleLocation = Unbound
+  aclHandling = IGNORE
+  name = default
+  package.filters = [/home/users|-.*/.tokens, /home/users|-.*/.rep:cache]
+  property.filters = [/|-^.*/cq:lastReplicated|-^.*/cq:lastReplicatedBy|-^.*/cq:lastReplicationAction]
+  service.factoryPid = org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory
+  service.pid = org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory.95ca0155-7758-4c3b-92e4-8738e4a0d646
+  type = jcrvlt
+
+PID = org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory.ae032bf5-220d-4187-b052-5bbfbdd2e06d
+  Factory PID = org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory
+  BundleLocation = Unbound
+  name = socialpubsync-vlt
+  service.factoryPid = org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory
+  service.pid = org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory.ae032bf5-220d-4187-b052-5bbfbdd2e06d
+  type = jcrvlt
+
+PID = org.apache.sling.distribution.trigger.impl.ScheduledDistributionTriggerFactory.e8394230-7371-41aa-8da1-2dd469bcb368
+  Factory PID = org.apache.sling.distribution.trigger.impl.ScheduledDistributionTriggerFactory
+  BundleLocation = Unbound
+  action = pull
+  name = socialpubsync-scheduled-trigger
+  seconds = 30
+  service.factoryPid = org.apache.sling.distribution.trigger.impl.ScheduledDistributionTriggerFactory
+  service.pid = org.apache.sling.distribution.trigger.impl.ScheduledDistributionTriggerFactory.e8394230-7371-41aa-8da1-2dd469bcb368
+
+PID = org.apache.sling.engine.impl.SlingMainServlet
+  BundleLocation = Unbound
+  service.pid = org.apache.sling.engine.impl.SlingMainServlet
+  sling.additional.response.headers = [X-Content-Type-Options=nosniff]
+
+PID = org.apache.sling.engine.impl.auth.SlingAuthenticator
+  BundleLocation = Unbound
+  auth.annonymous = false
+  auth.http = preemptive
+  auth.http.realm = Sling (Development)
+  auth.sudo.cookie = sling.sudo
+  auth.sudo.parameter = sudo
+  auth.uri.suffix = [/j_security_check]
+  service.pid = org.apache.sling.engine.impl.auth.SlingAuthenticator
+  sling.auth.anonymous.user =
+  sling.auth.requirements = [+/, -/libs/granite/core/content/login, -/etc.clientlibs, -/etc/clientlibs/granite]
+
+PID = org.apache.sling.engine.impl.log.RequestLogger
+  BundleLocation = Unbound
+  access.log.enabled = true
+  access.log.output = log.access
+  access.log.outputtype = 0
+  request.log.enabled = true
+  request.log.output = log.request
+  request.log.outputtype = 0
+  service.pid = org.apache.sling.engine.impl.log.RequestLogger
+
+PID = org.apache.sling.engine.parameters
+  BundleLocation = Unbound
+  file.location =
+  file.max = -1
+  file.threshold = 256000
+  request.max = -1
+  service.pid = org.apache.sling.engine.parameters
+  sling.default.max.parameters = 10000
+  sling.default.parameter.encoding = UTF-8
+
+PID = org.apache.sling.event.impl.jobs.JobConsumerManager
+  BundleLocation = Unbound
+  job.consumermanager.blacklist = []
+  job.consumermanager.whitelist = [*]
+  service.pid = org.apache.sling.event.impl.jobs.JobConsumerManager
+
+PID = org.apache.sling.event.impl.jobs.jcr.LockManager
+  BundleLocation = Unbound
+  lm.mode = none
+  service.pid = org.apache.sling.event.impl.jobs.jcr.LockManager
+
+PID = org.apache.sling.event.impl.jobs.jcr.PersistenceHandler
+  BundleLocation = Unbound
+  job.consumermanager.disableDistribution = false
+  service.pid = org.apache.sling.event.impl.jobs.jcr.PersistenceHandler
+
+PID = org.apache.sling.event.jobs.QueueConfiguration.351367ff-b1f8-47a9-9ef6-b0d4e282c9dd
+  Factory PID = org.apache.sling.event.jobs.QueueConfiguration
+  BundleLocation = Unbound
+  queue.maxparallel = -1
+  queue.name = Granite Workflow External Process Job Queue
+  queue.preferRunOnCreationInstance = true
+  queue.priority = MIN
+  queue.topics = com/adobe/granite/workflow/external/job*
+  queue.type = TOPIC_ROUND_ROBIN
+  service.factoryPid = org.apache.sling.event.jobs.QueueConfiguration
+  service.pid = org.apache.sling.event.jobs.QueueConfiguration.351367ff-b1f8-47a9-9ef6-b0d4e282c9dd
+
+PID = org.apache.sling.event.jobs.QueueConfiguration.41f18048-ecd1-4521-9ec4-f3e9fe878535
+  Factory PID = org.apache.sling.event.jobs.QueueConfiguration
+  BundleLocation = Unbound
+  queue.maxparallel = 0.5
+  queue.name = Granite Workflow Queue
+  queue.preferRunOnCreationInstance = true
+  queue.priority = MIN
+  queue.topics = com/adobe/granite/workflow/job*
+  queue.type = TOPIC_ROUND_ROBIN
+  service.factoryPid = org.apache.sling.event.jobs.QueueConfiguration
+  service.pid = org.apache.sling.event.jobs.QueueConfiguration.41f18048-ecd1-4521-9ec4-f3e9fe878535
+
+PID = org.apache.sling.event.jobs.QueueConfiguration.524455d1-9cec-449a-a80b-747d536e6116
+  Factory PID = org.apache.sling.event.jobs.QueueConfiguration
+  BundleLocation = Unbound
+  queue.name = com/day/cq/replication/job/{0}
+  queue.retries = -1
+  queue.topics = com/day/cq/replication/job/*
+  queue.type = ORDERED
+  service.factoryPid = org.apache.sling.event.jobs.QueueConfiguration
+  service.pid = org.apache.sling.event.jobs.QueueConfiguration.524455d1-9cec-449a-a80b-747d536e6116
+
+PID = org.apache.sling.event.jobs.QueueConfiguration.78d4fb61-1de2-4280-9ea2-f6124fd11c5e
+  Factory PID = org.apache.sling.event.jobs.QueueConfiguration
+  BundleLocation = Unbound
+  queue.keepJobs = true
+  queue.maxparallel = 2
+  queue.name = Content Fragment Update Processing Queue
+  queue.priority = MIN
+  queue.retries = 5
+  queue.topics = [dam/cfm/updateprocessor, dam/cfm/importcleanup]
+  queue.type = UNORDERED
+  service.factoryPid = org.apache.sling.event.jobs.QueueConfiguration
+  service.pid = org.apache.sling.event.jobs.QueueConfiguration.78d4fb61-1de2-4280-9ea2-f6124fd11c5e
+
+PID = org.apache.sling.event.jobs.QueueConfiguration.84a0b36d-c671-4b5e-a3d1-c68da7f57dc6
+  Factory PID = org.apache.sling.event.jobs.QueueConfiguration
+  BundleLocation = Unbound
+  queue.keepJobs = true
+  queue.maxparallel = 1
+  queue.name = Pre Upgrade Tasks Queue
+  queue.retries = 0
+  queue.topics = com/adobe/aem/preupgrade/job/*
+  queue.type = ORDERED
+  service.factoryPid = org.apache.sling.event.jobs.QueueConfiguration
+  service.pid = org.apache.sling.event.jobs.QueueConfiguration.84a0b36d-c671-4b5e-a3d1-c68da7f57dc6
+
+PID = org.apache.sling.event.jobs.QueueConfiguration.94a178f2-b6b8-4e42-8dbf-f708fefea4a3
+  Factory PID = org.apache.sling.event.jobs.QueueConfiguration
+  BundleLocation = Unbound
+  queue.keepJobs = true
+  queue.maxparallel = 1
+  queue.name = Maintenance Queue
+  queue.retries = 0
+  queue.topics = com/adobe/granite/maintenance/job/*
+  queue.type = ORDERED
+  service.factoryPid = org.apache.sling.event.jobs.QueueConfiguration
+  service.pid = org.apache.sling.event.jobs.QueueConfiguration.94a178f2-b6b8-4e42-8dbf-f708fefea4a3
+
+PID = org.apache.sling.event.jobs.QueueConfiguration.950a3971-61b7-4343-9c6e-0203463b8d6a
+  Factory PID = org.apache.sling.event.jobs.QueueConfiguration
+  BundleLocation = Unbound
+  queue.maxparallel = 1
+  queue.name = Collection update on asset move and delete
+  queue.priority = MIN
+  queue.retries = 1
+  queue.retrydelay = 60000
+  queue.topics = com/adobe/cq/collection/update/job
+  queue.type = ORDERED
+  service.factoryPid = org.apache.sling.event.jobs.QueueConfiguration
+  service.pid = org.apache.sling.event.jobs.QueueConfiguration.950a3971-61b7-4343-9c6e-0203463b8d6a
+
+PID = org.apache.sling.event.jobs.QueueConfiguration.9e6c0a15-46b6-4d56-9f23-7fd5d867abdc
+  Factory PID = org.apache.sling.event.jobs.QueueConfiguration
+  BundleLocation = Unbound
+  queue.maxparallel = 0.5
+  queue.name = Granite Transient Workflow Queue
+  queue.preferRunOnCreationInstance = true
+  queue.priority = MIN
+  queue.topics = com/adobe/granite/workflow/transient/job*
+  queue.type = TOPIC_ROUND_ROBIN
+  service.factoryPid = org.apache.sling.event.jobs.QueueConfiguration
+  service.pid = org.apache.sling.event.jobs.QueueConfiguration.9e6c0a15-46b6-4d56-9f23-7fd5d867abdc
+
+PID = org.apache.sling.event.jobs.QueueConfiguration.ae133268-6874-4e5a-9c06-9de871446d9b
+  Factory PID = org.apache.sling.event.jobs.QueueConfiguration
+  BundleLocation = Unbound
+  queue.name = org/apache/sling/distribution/queue/{0}
+  queue.retries = -1
+  queue.topics = org/apache/sling/distribution/queue/*
+  queue.type = ORDERED
+  service.factoryPid = org.apache.sling.event.jobs.QueueConfiguration
+  service.pid = org.apache.sling.event.jobs.QueueConfiguration.ae133268-6874-4e5a-9c06-9de871446d9b
+
+PID = org.apache.sling.event.jobs.QueueConfiguration.af532a09-6134-4339-ae79-ff2843080639
+  Factory PID = org.apache.sling.event.jobs.QueueConfiguration
+  BundleLocation = Unbound
+  queue.maxparallel = 1
+  queue.name = IDS Processing Queue
+  queue.priority = MIN
+  queue.retries = 5
+  queue.retrydelay = 60000
+  queue.topics = dam/proxy/ids/job
+  queue.type = ORDERED
+  service.factoryPid = org.apache.sling.event.jobs.QueueConfiguration
+  service.pid = org.apache.sling.event.jobs.QueueConfiguration.af532a09-6134-4339-ae79-ff2843080639
+
+PID = org.apache.sling.event.jobs.QueueConfiguration.c99cd90c-245b-464a-a451-56167f5a82e0
+  Factory PID = org.apache.sling.event.jobs.QueueConfiguration
+  BundleLocation = Unbound
+  queue.keepJobs = true
+  queue.maxparallel = 1
+  queue.name = DAM Unzip
+  queue.priority = MIN
+  queue.retries = 0
+  queue.topics = com/day/cq/dam/unzip
+  queue.type = ORDERED
+  service.factoryPid = org.apache.sling.event.jobs.QueueConfiguration
+  service.pid = org.apache.sling.event.jobs.QueueConfiguration.c99cd90c-245b-464a-a451-56167f5a82e0
+
+PID = org.apache.sling.event.jobs.QueueConfiguration.ea18dcda-9515-4ef9-89a0-067bc9b29957
+  Factory PID = org.apache.sling.event.jobs.QueueConfiguration
+  BundleLocation = Unbound
+  queue.maxparallel = -1
+  queue.name = Granite Workflow External Process Polling Queue
+  queue.preferRunOnCreationInstance = true
+  queue.priority = MIN
+  queue.topics = com/adobe/granite/workflow/external/polling/event
+  queue.type = TOPIC_ROUND_ROBIN
+  service.factoryPid = org.apache.sling.event.jobs.QueueConfiguration
+  service.pid = org.apache.sling.event.jobs.QueueConfiguration.ea18dcda-9515-4ef9-89a0-067bc9b29957
+
+PID = org.apache.sling.event.jobs.QueueConfiguration.f61c4752-7251-43b5-b344-2d0ccd0d9a59
+  Factory PID = org.apache.sling.event.jobs.QueueConfiguration
+  BundleLocation = Unbound
+  queue.maxparallel = -1
+  queue.name = Granite Workflow Timeout Queue
+  queue.preferRunOnCreationInstance = true
+  queue.priority = MIN
+  queue.topics = com/adobe/granite/workflow/timeout/job
+  queue.type = TOPIC_ROUND_ROBIN
+  service.factoryPid = org.apache.sling.event.jobs.QueueConfiguration
+  service.pid = org.apache.sling.event.jobs.QueueConfiguration.f61c4752-7251-43b5-b344-2d0ccd0d9a59
+
+PID = org.apache.sling.hc.core.impl.CompositeHealthCheck.09393fb9-b7a5-44be-9f43-38d218234fbb
+  Factory PID = org.apache.sling.hc.core.impl.CompositeHealthCheck
+  BundleLocation = Unbound
+  filter.tags = [security]
+  hc.mbean.name = securitychecks
+  hc.name = Security Checks
+  hc.tags = []
+  service.factoryPid = org.apache.sling.hc.core.impl.CompositeHealthCheck
+  service.pid = org.apache.sling.hc.core.impl.CompositeHealthCheck.09393fb9-b7a5-44be-9f43-38d218234fbb
+
+PID = org.apache.sling.hc.core.impl.CompositeHealthCheck.d165f7a5-a759-4dbc-a8af-7f1b16a4fc41
+  Factory PID = org.apache.sling.hc.core.impl.CompositeHealthCheck
+  BundleLocation = Unbound
+  filter.tags = [system]
+  hc.mbean.name = systemchecks
+  hc.name = System Maintenance
+  hc.tags = []
+  service.factoryPid = org.apache.sling.hc.core.impl.CompositeHealthCheck
+  service.pid = org.apache.sling.hc.core.impl.CompositeHealthCheck.d165f7a5-a759-4dbc-a8af-7f1b16a4fc41
+
+PID = org.apache.sling.hc.support.DefaultLoginsHealthCheck.76c9d453-45d1-44a5-aa86-d08afbe30450
+  Factory PID = org.apache.sling.hc.support.DefaultLoginsHealthCheck
+  BundleLocation = Unbound
+  hc.mbean.name = Default logins
+  hc.name = Default logins are disabled
+  hc.tags = [security, logins, production]
+  logins = [admin:admin, author:author]
+  service.factoryPid = org.apache.sling.hc.support.DefaultLoginsHealthCheck
+  service.pid = org.apache.sling.hc.support.DefaultLoginsHealthCheck.76c9d453-45d1-44a5-aa86-d08afbe30450
+
+PID = org.apache.sling.hc.support.SlingRequestStatusHealthCheck.3f40164f-4775-43fa-86d3-9e391dcc972d
+  Factory PID = org.apache.sling.hc.support.SlingRequestStatusHealthCheck
+  BundleLocation = Unbound
+  hc.mbean.name = Initial content requests
+  hc.name = Well-known request paths return expected HTTP status
+  hc.tags = [content, startup]
+  path = [libs/cq/core/content/welcome.html, communities.html, projects.html, sites.html/content, assets.html/content/dam, tools.html, mcmadmin, libs/launches/content/admin.html, manuscriptsadmin, inbox, libs/cq/taskmanagement/content/taskmanager.html, useradmin, tagging, miscadmin, etc/replication.html, libs/cq/workflow/content/console.html, libs/cq/core/content/tools/cloudservices.html, libs/granite/topology/content/view.html, libs/granite/offloading/content/view.html, libs/granite/backup/content/admin.html, libs/granite/security/content/useradmin.html, libs/granite/security/content/groupadmin.html]
+  service.factoryPid = org.apache.sling.hc.support.SlingRequestStatusHealthCheck
+  service.pid = org.apache.sling.hc.support.SlingRequestStatusHealthCheck.3f40164f-4775-43fa-86d3-9e391dcc972d
+
+PID = org.apache.sling.i18n.impl.I18NFilter
+  BundleLocation = Unbound
+  service.pid = org.apache.sling.i18n.impl.I18NFilter
+  service.ranking = 10000
+  sling.filter.scope = [request, forward, error]
+
+PID = org.apache.sling.i18n.impl.JcrResourceBundleProvider
+  BundleLocation = Unbound
+  resource.paths = [., /content]
+  service.pid = org.apache.sling.i18n.impl.JcrResourceBundleProvider
+
+PID = org.apache.sling.installer.provider.jcr.impl.JcrInstaller
+  BundleLocation = Unbound
+  handler.schemes = [jcrinstall, launchpad]
+  service.pid = org.apache.sling.installer.provider.jcr.impl.JcrInstaller
+  sling.jcrinstall.folder.name.regexp = .*/(install|config)$
+  sling.jcrinstall.new.config.path = system/config
+  sling.jcrinstall.search.path = [/libs:100, /apps:200]
+
+PID = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment.5c221986-a6bb-4d2e-9e41-d3cb6760b644
+  Factory PID = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment
+  service.pid = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment.5c221986-a6bb-4d2e-9e41-d3cb6760b644
+  whitelist.bundles = [com.adobe.cq.cq-searchpromote-integration]
+  whitelist.name = cq-integrations
+
+PID = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment.65deeaa6-f371-434e-92a9-69c75bec0183
+  Factory PID = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment
+  service.pid = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment.65deeaa6-f371-434e-92a9-69c75bec0183
+  whitelist.bundles = [com.day.cq.cq-upgrades-executor]
+  whitelist.name = cq-upgrade
+
+PID = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment.6c1cbe37-381f-4eb8-b8e2-90666842f277
+  Factory PID = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment
+  service.pid = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment.6c1cbe37-381f-4eb8-b8e2-90666842f277
+  whitelist.bundles = [com.adobe.granite.auth.oauth, com.adobe.granite.auth.saml, com.adobe.granite.installer.factory.packages, com.adobe.granite.maintenance.core, com.adobe.granite.repository, com.adobe.granite.repository.checker, com.day.crx.sling.crx-auth-token, com.day.cq.cq-authhandler, day-commons-gfx]
+  whitelist.name = granite
+
+PID = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment.853b629b-f1f7-4214-a12b-f9701bc02e73
+  Factory PID = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment
+  service.pid = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment.853b629b-f1f7-4214-a12b-f9701bc02e73
+  whitelist.bundles = [com.adobe.cq.dam.cq-scene7-imaging]
+  whitelist.name = cq-assets
+
+PID = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment.af4fa225-08ef-40bf-9d92-b8780ea40026
+  Factory PID = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment
+  service.pid = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment.af4fa225-08ef-40bf-9d92-b8780ea40026
+  whitelist.bundles = [org.apache.sling.junit.core, org.apache.sling.junit.scriptable]
+  whitelist.name = sling-junit
+
+PID = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment.b9e00ece-2561-4e2c-b101-0e7b0528dc2c
+  Factory PID = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment
+  service.pid = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment.b9e00ece-2561-4e2c-b101-0e7b0528dc2c
+  whitelist.bundles = [com.day.cq.cq-security]
+  whitelist.name = cq-platform
+
+PID = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment.cf8d277b-c816-4dd4-91e9-1ff86a4416ce
+  Factory PID = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment
+  service.pid = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment.cf8d277b-c816-4dd4-91e9-1ff86a4416ce
+  whitelist.bundles = [org.apache.sling.discovery.commons, org.apache.sling.discovery.base, org.apache.sling.discovery.oak, org.apache.sling.extensions.webconsolesecurityprovider, org.apache.sling.i18n, org.apache.sling.installer.provider.jcr, org.apache.sling.jcr.base, org.apache.sling.jcr.contentloader, org.apache.sling.jcr.davex, org.apache.sling.jcr.jackrabbit.usermanager, org.apache.sling.jcr.oak.server, org.apache.sling.jcr.repoinit, org.apache.sling.jcr.resource, org.apache.sling.jcr.webconsole, org.apache.sling.resourceresolver, org.apache.sling.scripting.core, org.apache.sling.servlets.post, org.apache.sling.servlets.resolver]
+  whitelist.name = sling
+
+PID = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment.e55c09c6-2132-4878-b784-f3cfd3e68343
+  Factory PID = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment
+  service.pid = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment.e55c09c6-2132-4878-b784-f3cfd3e68343
+  whitelist.bundles = [com.adobe.cq.cq-pre-upgrade-cleanup]
+  whitelist.name = quickstart
+
+PID = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment.f153aa5e-7b6c-4aab-a6a9-897bc09f1847
+  Factory PID = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment
+  service.pid = org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment.f153aa5e-7b6c-4aab-a6a9-897bc09f1847
+  whitelist.bundles = [com.day.cq.wcm.cq-msm-core]
+  whitelist.name = cq-wcm
+
+PID = org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet
+  BundleLocation = Unbound
+  alias = /crx/server
+  service.pid = org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet
+
+PID = org.apache.sling.jcr.repoinit.impl.RepositoryInitializer
+  BundleLocation = Unbound
+  references = model@repoinit:context:/resources/provisioning/model.txt
+  service.pid = org.apache.sling.jcr.repoinit.impl.RepositoryInitializer
+
+PID = org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl
+  BundleLocation = Unbound
+  resource.resolver.log.unclosed = false
+  resource.resolver.manglenamespaces = true
+  resource.resolver.mapping = [/-/]
+  resource.resolver.searchpath = [/apps, /libs]
+  resource.resolver.vanitypath.blacklist = [/content/usergenerated]
+  resource.resolver.vanitypath.whitelist = [/apps/, /libs/, /content/]
+  service.pid = org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl
+
+PID = org.apache.sling.jcr.resourcesecurity.impl.ResourceAccessGateFactory.4b049159-1143-417f-9b21-0896ca0e4ef2
+  Factory PID = org.apache.sling.jcr.resourcesecurity.impl.ResourceAccessGateFactory
+  BundleLocation = Unbound
+  jcrPath = /system/sling/monitoring/mbeans
+  path = ^/system/sling/monitoring/mbeans(/(.)*)?
+  service.factoryPid = org.apache.sling.jcr.resourcesecurity.impl.ResourceAccessGateFactory
+  service.pid = org.apache.sling.jcr.resourcesecurity.impl.ResourceAccessGateFactory.4b049159-1143-417f-9b21-0896ca0e4ef2
+
+PID = org.apache.sling.jcr.webdav.impl.servlets.SimpleWebDavServlet
+  BundleLocation = Unbound
+  collection.types = [nt:file, nt:resource, dam:Asset]
+  dav.realm = Adobe CRX WebDAV
+  dav.root = /crx/repository
+  filter.prefixes = [rep, jcr]
+  service.pid = org.apache.sling.jcr.webdav.impl.servlets.SimpleWebDavServlet
+  type.collections = sling:Folder
+  type.content = nt:resource
+  type.noncollections = nt:file
+
+PID = org.apache.sling.resource.inventory.impl.ResourceInventoryPrinterFactory.d5ac0ed7-6f59-4509-9eda-70e24e86fcb8
+  Factory PID = org.apache.sling.resource.inventory.impl.ResourceInventoryPrinterFactory
+  BundleLocation = Unbound
+  felix.inventory.printer.name = jmxresource
+  felix.inventory.printer.title = JMX Tree
+  path = /system/sling/monitoring/mbeans
+  service.factoryPid = org.apache.sling.resource.inventory.impl.ResourceInventoryPrinterFactory
+  service.pid = org.apache.sling.resource.inventory.impl.ResourceInventoryPrinterFactory.d5ac0ed7-6f59-4509-9eda-70e24e86fcb8
+
+PID = org.apache.sling.resourcemerger.picker.overriding
+  BundleLocation = Unbound
+  configured =
+  service.pid = org.apache.sling.resourcemerger.picker.overriding
+
+PID = org.apache.sling.scripting.core.impl.ScriptCacheImpl
+  BundleLocation = Unbound
+  org.apache.sling.scripting.cache.additional_extensions = [js]
+  service.pid = org.apache.sling.scripting.core.impl.ScriptCacheImpl
+
+PID = org.apache.sling.scripting.java.impl.JavaScriptEngineFactory
+  BundleLocation = Unbound
+  java.classdebuginfo = true
+  service.pid = org.apache.sling.scripting.java.impl.JavaScriptEngineFactory
+
+PID = org.apache.sling.scripting.jsp.JspScriptEngineFactory
+  BundleLocation = Unbound
+  jasper.classdebuginfo = true
+  jasper.mappedfile = true
+  service.pid = org.apache.sling.scripting.jsp.JspScriptEngineFactory
+
+PID = org.apache.sling.scripting.sightly.js.impl.jsapi.SlyBindingsValuesProvider
+  BundleLocation = Unbound
+  org.apache.sling.scripting.sightly.js.bindings = [granite:/libs/sling/sightly/js/internal/sly.js, wcm:/libs/sightly/js/internal/aem.js, sightly:/libs/sling/sightly/js/internal/sly.js]
+  service.pid = org.apache.sling.scripting.sightly.js.impl.jsapi.SlyBindingsValuesProvider
+
+PID = org.apache.sling.security.impl.ContentDispositionFilter
+  BundleLocation = Unbound
+  service.pid = org.apache.sling.security.impl.ContentDispositionFilter
+  sling.content.disposition.all.paths = true
+  sling.content.disposition.excluded.paths = [/libs/cq/ui/resources/0.html, /etc/dam/viewers/s7viewers/html5/s7sdkclose.html, /etc/dam/viewers/s7viewers/html5/CarouselViewer.html, /etc/dam/viewers/s7viewers/html5/eCatalogViewer.html, /etc/dam/viewers/s7viewers/html5/BasicVideoViewer.html, /etc/dam/viewers/s7viewers/html5/BasicZoomViewer.html, /etc/dam/viewers/s7viewers/html5/ZoomViewer.html, /etc/dam/viewers/s7viewers/html5/FlyoutViewer.html, /etc/dam/viewers/s7viewers/html5/SpinViewer.html, /etc/dam/viewers/s7viewers/html5/VideoViewer.html, /etc/dam/viewers/s7viewers/html5/MixedMediaViewer.html, /etc/dam/viewers/s7viewers/html5/InteractiveImage.html, /etc/dam/viewers/s7viewers/html5/InteractiveVideoViewer.html, /etc/dam/viewers/s7sdk/2.9/flash/VideoPlayer.swf, /etc/dam/viewers/s7sdk/dev/flash/VideoPlayer.swf, /etc/dam/viewers/s7sdk/2.10/flash/VideoPlayer.swf, /etc/dam/viewers/s7sdk/2.11/flash/VideoPlayer.swf, /etc/clientlibs/foundation/shared/endorsed/swf/slideshow.swf, /etc/dam/viewers/s7sdk/3.0/flash/VideoPlayer.swf, /etc/dam/viewers/s7sdk/3.1/flash/VideoPlayer.swf, /etc/dam/viewers/s7sdk/3.2/flash/VideoPlayer.swf]
+  sling.content.disposition.paths = []
+
+PID = org.apache.sling.security.impl.ReferrerFilter
+  BundleLocation = Unbound
+  allow.empty = false
+  service.pid = org.apache.sling.security.impl.ReferrerFilter
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl
+  BundleLocation = Unbound
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl
+  user.default =
+  user.mapping = [com.adobe.granite.oauth.server=oauthservice]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.012d80f6-6fde-4d57-9667-9f350cdecb16
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.012d80f6-6fde-4d57-9667-9f350cdecb16
+  service.ranking = 10
+  user.mapping = [com.adobe.cq.social.cq-social-calendar:ugc-writer=communities-ugc-writer]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.014fb089-4011-4fd5-b168-5927c721a6d2
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.014fb089-4011-4fd5-b168-5927c721a6d2
+  user.mapping = [com.day.cq.workflow.cq-workflow-console=workflow-service, com.day.cq.workflow.cq-workflow-impl:workflow=workflow-service, com.day.cq.workflow.cq-workflow-impl:workflow-user=workflow-user-service, com.day.cq.workflow.cq-workflow-impl:repo-reader=repository-reader-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.0191e3d4-507b-4dcc-9637-e5dccf003018
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.0191e3d4-507b-4dcc-9637-e5dccf003018
+  service.ranking = 0
+  user.mapping = [com.adobe.cq.social.cq-social-graph-impl:graph-admin=communities-user-admin, com.adobe.cq.social.cq-social-graph-impl:ugc-writer=communities-ugc-writer]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.04770397-a14c-420d-9be6-408b9c27d11a
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.04770397-a14c-420d-9be6-408b9c27d11a
+  user.default =
+  user.mapping = [com.adobe.granite.taskmanagement.core:taskmanagement=taskmanagement-service, com.adobe.granite.taskmanagement.core:user=workflow-user-service, com.adobe.granite.taskmanagement.workflow:taskmanagement=taskmanagement-service, com.adobe.granite.taskmanagement.workflow:workflow=workflow-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.05862b30-3aa6-4383-b070-59a7e2181714
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.05862b30-3aa6-4383-b070-59a7e2181714
+  user.default =
+  user.mapping = [com.day.cq.cq-rewriter:linkstorage-service=linkstorage-service, com.day.cq.cq-rewriter:fontconfig-service=fontconfig-service, com.day.cq.cq-rewriter:repository-reader-service=repository-reader-service, com.day.cq.cq-polling-importer:polling-importer-service=polling-importer-service, com.day.cq.cq-replication-audit:repository-reader-service=repository-reader-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.06b051ef-8549-4a2d-952e-d3b3ab170ea8
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.06b051ef-8549-4a2d-952e-d3b3ab170ea8
+  user.default =
+  user.mapping = [com.adobe.aemds.guide.aemds-guide-core=fd-service, com.adobe.aemds.guide.aemds-guide-core-impl=fd-service, com.adobe.aemds.guide.aemds-guide-core:getWebFontService=webservice-support-servicelibfinder]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.09ea6c3b-54a7-475c-b902-90a58795cdb4
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.09ea6c3b-54a7-475c-b902-90a58795cdb4
+  user.default =
+  user.mapping = [com.adobe.cq.cq-analytics-integration:analytics=analyticsservice]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.0a83ebd8-24b5-4a42-9329-1d96347b8d42
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.0a83ebd8-24b5-4a42-9329-1d96347b8d42
+  user.default =
+  user.mapping = [com.day.cq.wcm.cq-wcm-foundation:hierarchymodification-listener-service=hierarchymodification-listener-service, com.day.cq.wcm.cq-wcm-foundation:start-workflow-service=foundation-forms-service, com.day.cq.wcm.cq-wcm-foundation:colctl-postprocessor-service=hierarchymodification-listener-service, com.day.cq.wcm.cq-wcm-foundation:form-store-service=foundation-forms-store-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.0b671b83-68c1-4c1c-ad1c-5beb5a097e07
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.0b671b83-68c1-4c1c-ad1c-5beb5a097e07
+  user.default =
+  user.mapping = [com.day.cq.mcm.cq-mcm-campaign:campaign-cloudservice=campaign-cloudservice]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.0d5ffba5-bf04-475f-a017-4b59d3712782
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.0d5ffba5-bf04-475f-a017-4b59d3712782
+  service.ranking = 10
+  user.mapping = [com.adobe.cq.social.cq-social-forum:ugc-reader=communities-ugc-writer, com.adobe.cq.social.cq-social-forum:ugc-writer=communities-ugc-writer, com.adobe.cq.social.cq-social-forum:workflow-launcher=communities-workflow-launcher]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.0e597354-ed60-43c5-ab51-0718190b0538
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.0e597354-ed60-43c5-ab51-0718190b0538
+  service.ranking = 0
+  user.mapping = [com.adobe.cq.social.cq-social-livefyre:livefyre-user-reader=communities-user-admin, com.adobe.cq.social.cq-social-livefyre:livefyre-config-reader=communities-user-admin]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.113ac1ff-abc7-4d5c-9ea9-f87291f4e026
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.113ac1ff-abc7-4d5c-9ea9-f87291f4e026
+  service.ranking = 0
+  user.mapping = [com.adobe.cq.social.cq-social-jcr-provider:ugc-writer=communities-ugc-writer, com.adobe.cq.social.cq-social-jcr-provider-common:index-admin=communities-index-admin]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.13e31656-eb23-4e3b-a321-b800dc3811ae
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.13e31656-eb23-4e3b-a321-b800dc3811ae
+  service.ranking = 0
+  user.mapping = [com.adobe.cq.social.cq-social-scoring-basic-impl:communities-utility-reader=communities-utility-reader, com.adobe.cq.social.cq-social-scoring-basic-impl:communities-ugc-writer=communities-ugc-writer]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.13fd1acd-5827-4fef-a47e-9251e0415552
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.13fd1acd-5827-4fef-a47e-9251e0415552
+  user.default =
+  user.mapping = [com.adobe.granite.auth.oauth=authentication-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.159adb44-c8c7-44ba-baa5-319571415e0a
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.159adb44-c8c7-44ba-baa5-319571415e0a
+  user.default =
+  user.mapping = [com.adobe.granite.security.installer=installerservice]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.17f32eb5-91ce-4f73-8ae9-f8512f2e6559
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.17f32eb5-91ce-4f73-8ae9-f8512f2e6559
+  user.mapping = [com.day.cq.cq-tagging:tag-garbage-collection=tag-garbage-collection-service, com.day.cq.cq-tagging:tag-validation=tag-validation-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.1b933100-818b-4995-82af-8a88c87c96c7
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.1b933100-818b-4995-82af-8a88c87c96c7
+  user.default =
+  user.mapping = [com.day.cq.cq-searchpromote=searchpromote-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.1dcc0ca9-a40c-4558-95ab-125824f7c920
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.1dcc0ca9-a40c-4558-95ab-125824f7c920
+  service.ranking = 0
+  user.mapping = [com.adobe.cq.social.cq-social-console:msm-service=msm-service, com.adobe.cq.social.cq-social-console:index-admin=communities-index-admin, com.adobe.cq.social.cq-social-console:communities-acl-manager=communities-acl-manager, com.adobe.cq.social.cq-social-console:TENANT-SERVICE-USER-NON-PRODUCTION=communities-utility-reader, com.adobe.cq.social.cq-social-console:communities-analytics-admin=communities-analytics-admin, com.adobe.cq.social.cq-social-console:communities-utility-reader=communities-utility-reader, com.adobe.cq.social.cq-social-console:dam-collection-service=resourcecollectionservice, com.adobe.cq.social.cq-social-console:dam-writer=dam-update-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.1e0c0be3-48b8-4649-a0f0-2a8f6ba45420
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.1e0c0be3-48b8-4649-a0f0-2a8f6ba45420
+  user.mapping = [org.apache.sling.tenant=sling-tenant]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.1e722045-b044-4ee3-af85-add6a43f7e2c
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.1e722045-b044-4ee3-af85-add6a43f7e2c
+  service.ranking = 0
+  user.mapping = [com.adobe.cq.social.cq-social-tally:ugc-writer=communities-ugc-writer]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.1fc15fca-b0b4-4781-8f13-7c98ba702914
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.1fc15fca-b0b4-4781-8f13-7c98ba702914
+  user.default =
+  user.mapping = [com.adobe.cq.cq-account:account-management-service=account-manager]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.2138577f-6043-425e-b688-2eef5cc75c1d
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.2138577f-6043-425e-b688-2eef5cc75c1d
+  user.default =
+  user.mapping = [com.adobe.cq.screens.com.adobe.cq.screens.dcc:omnisearch-service=omnisearch-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.2235cbd7-825c-4c45-975f-ed4134a3b893
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.2235cbd7-825c-4c45-975f-ed4134a3b893
+  user.default =
+  user.mapping = [com.adobe.cq.sample.we.retail.core:orders=commerce-orders-service, com.adobe.cq.sample.we.retail.core:frontend=commerce-frontend-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.241a2262-17ff-46e0-ad6c-ec1b61ffe019
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.241a2262-17ff-46e0-ad6c-ec1b61ffe019
+  user.default =
+  user.mapping = [com.adobe.cq.cq-dtm=dtmservice]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.2747f55d-e015-431c-9c1b-6ce7cb363535
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.2747f55d-e015-431c-9c1b-6ce7cb363535
+  service.ranking = 0
+  user.mapping = [com.adobe.cq.social.cq-social-members-impl:communities-user-admin=communities-user-admin]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.2b19ae18-4efa-4764-b85e-6ef988b184e1
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.2b19ae18-4efa-4764-b85e-6ef988b184e1
+  service.ranking = 0
+  user.mapping = [com.adobe.cq.social.cq-social-ugc-search-collections:ugc-writer=communities-ugc-writer, com.adobe.cq.social.cq-social-ugcbase-impl:ugc-writer=communities-ugc-writer, com.adobe.cq.social.cq-social-ugcbase-impl:utility-reader=communities-utility-reader, com.adobe.cq.social.cq-social-ugcbase-impl:srp-config-reader=communities-srp-config-reader, com.adobe.cq.social.cq-social-ugcbase-impl:user-admin=communities-user-admin]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.2bff9cd1-5a8f-49df-b40f-593c96134860
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.2bff9cd1-5a8f-49df-b40f-593c96134860
+  user.default =
+  user.mapping = [com.day.cq.cq-authhandler=cug-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.2c0d2a40-700d-460c-98a6-132cc7501fe6
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.2c0d2a40-700d-460c-98a6-132cc7501fe6
+  user.default =
+  user.mapping = [com.adobe.granite.translation.core:translation-config=translation-config-service, com.adobe.granite.translation.connector.msft.core:translation-config=translation-config-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.305e1b24-45de-4119-bf90-593bc2286535
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.305e1b24-45de-4119-bf90-593bc2286535
+  service.ranking = 0
+  user.mapping = [com.adobe.cq.social.cq-social-gamification-impl:communities-utility-reader=communities-utility-reader, com.adobe.cq.social.cq-social-gamification-impl:communities-ugc-writer=communities-ugc-writer]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.30cfe82a-184f-4ab5-ba60-9506bae6fbf0
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.30cfe82a-184f-4ab5-ba60-9506bae6fbf0
+  user.default =
+  user.mapping = [com.adobe.dam.cq-dam-cfm-impl:replicationService=replication-service, com.adobe.dam.cq-dam-cfm-impl:referenceProcessingService=reference-processing-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.33bf3723-c124-401d-ae6b-a0d9919a536c
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.33bf3723-c124-401d-ae6b-a0d9919a536c
+  user.mapping = [org.apache.sling.jcr.resource:observation=sling-readall]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.33c4b91a-dbf9-4e02-bda1-1dd5ecda2c4a
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.33c4b91a-dbf9-4e02-bda1-1dd5ecda2c4a
+  user.default =
+  user.mapping = [com.adobe.cq.mobile.cq-mobile-dps:omnisearch-service=omnisearch-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.34e439d8-c7a2-439a-95be-b10796d92285
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.34e439d8-c7a2-439a-95be-b10796d92285
+  user.default =
+  user.mapping = [com.day.cq.wcm.cq-wcm-designimporter:canvaspage-activate-service=canvaspage-activate-service, com.day.cq.wcm.cq-wcm-designimporter:canvaspage-delete-service=canvaspage-delete-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.36c24a50-79f7-4f63-8c92-bbec55333c57
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.36c24a50-79f7-4f63-8c92-bbec55333c57
+  user.mapping = [org.apache.sling.rewriter=sling-rewriter]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.3ad82678-2a4d-4102-9e87-afe8a6bb124a
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.3ad82678-2a4d-4102-9e87-afe8a6bb124a
+  service.ranking = 0
+  user.mapping = [com.adobe.cq.social.cq-social-sync:user-admin=communities-user-admin, com.adobe.granite.distribution.core:socialpubsync-distributionService=communities-user-admin, org.apache.sling.distribution.core:socialpubsync-distributionService=communities-user-admin]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.3e9368b8-66cb-4a6d-8b26-bbbefe9d54ea
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.3e9368b8-66cb-4a6d-8b26-bbbefe9d54ea
+  user.default =
+  user.mapping = [com.day.cq.cq-compat-codeupgrade:compat-codeupgrade=compat-codeupgrade-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.41210cfc-94a0-4bdc-83ba-5dd611caa8df
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.41210cfc-94a0-4bdc-83ba-5dd611caa8df
+  user.default =
+  user.mapping = [com.day.cq.wcm.cq-wcm-mobile-core:statistics-service=statistics-service, com.day.cq.wcm.cq-wcm-mobile-core=wurfl-loader-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.43e237d1-ba34-4f4f-96d6-8fcf246527bc
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.43e237d1-ba34-4f4f-96d6-8fcf246527bc
+  user.default =
+  user.mapping = [com.adobe.granite.auth.saml=authentication-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.44156746-15da-461a-bd1e-30911c4b67c5
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.44156746-15da-461a-bd1e-30911c4b67c5
+  user.default =
+  user.mapping = [com.adobe.forms.common.adobe-xfaforms-common=fd-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.44991ff4-a491-44f8-b17e-766e02fb9daf
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.44991ff4-a491-44f8-b17e-766e02fb9daf
+  user.default =
+  user.mapping = [com.adobe.aemds.formsmanager.adobe-aemds-formsanddocuments-core=fd-service, com.adobe.livecycle.forms.forms-manager.package-bundle=fd-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.472a347e-423e-4256-ab7f-16b0f057d7cd
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.472a347e-423e-4256-ab7f-16b0f057d7cd
+  user.default =
+  user.mapping = [com.day.cq.wcm.cq-wcm-webservice-support:replication=webservice-support-replication, com.day.cq.wcm.cq-wcm-webservice-support:servicelibfinder=webservice-support-servicelibfinder]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.4b51c7fc-f868-4dc7-be58-9592e586cc8c
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.4b51c7fc-f868-4dc7-be58-9592e586cc8c
+  user.default =
+  user.mapping = [com.day.cq.wcm.cq-wcm-notification:notification-service=notification-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.4bbf25af-5fae-4240-8152-e667e5b3b7b2
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.4bbf25af-5fae-4240-8152-e667e5b3b7b2
+  user.mapping = [org.apache.sling.scripting.sightly.js.provider=sling-scripting, org.apache.sling.scripting.core=sling-scripting, org.apache.sling.servlets.resolver:scripts=sling-scripting]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.4be02784-1fd7-4452-9c67-cb97127fe35e
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.4be02784-1fd7-4452-9c67-cb97127fe35e
+  user.mapping = [com.day.cq.dam.cq-dam-core:activitypurgesrv=activitypurgesrv, com.day.cq.dam.cq-dam-core:teammanager=dam-teammgr-service, com.day.cq.dam.cq-dam-core:resourcecollectionservice=resourcecollectionservice, com.day.cq.dam.cq-dam-core:pathbuilder=targetservice, com.day.cq.dam.cq-dam-core:assetmove=idsjobprocessor, com.day.cq.dam.cq-dam-s7dam:dynamicmediaconfigservice=dynamicmedia-config-service, com.day.cq.dam.cq-dam-s7dam:s7damconfigservice=s7dam-config-service, com.day.cq.dam.cq-dam-s7dam:videoproxyserviceprocess=dam-update-service, com.day.cq.dam.cq-dam-s7dam:scene7assetservice=scene7-asset-service, com.day.cq.dam.cq-dam-scene7:scene7assetservice=scene7-asset-service, com.day.cq.dam.cq-dam-scene7:scene7configservice=scene7-config-service, com.day.cq.dam.cq-dam-core:folderpreviewupdatehelper=idsjobprocessor, com.day.cq.dam.cq-dam-core:eventrecorderhelper=dam-activitywriter-service, com.day.cq.dam.cq-dam-core:eventlistenerhelper=dam-asseteventmonitor-service, com.day.cq.dam.cq-dam-core:commentmonitorhelper=dam-asseteventmonitor-service, com.day.cq.dam.cq-dam-core:usermanagerhelper=dam-teammgr-service, com.adobe.cq.cq-dam-index-builder:damindexservice=index-admin, com.day.cq.dam.cq-dam-similaritysearch:eventlistenerhelper=dam-asseteventmonitor-service, com.day.cq.dam.cq-dam-similaritysearch:similaritysearchservice=dam-update-service, com.day.cq.dam.cq-dam-core:assetidhelper=dam-update-service, com.day.cq.dam.cq-dam-core:expirymonitoringhelper=dam-asseteventmonitor-service, com.day.cq.dam.cq-dam-core:assetreplicationhelper=dynamic-media-replication, com.day.cq.dam.cq-dam-core:notificationhelper=notification-service, com.day.cq.dam.cq-dam-core:omnisearch-service=omnisearch-service, org.apache.sling.scripting.core:scene7assetservice=scene7-asset-service, org.apache.sling.scripting.core:scene7configservice=scene7-config-service, com.day.cq.dam.cq-dam-core:chunkdeleteservice=dam-update-service, com.day.cq.dam.cq-dam-core:streameduploadservice=dam-update-service, com.adobe.cq.dam.cq-scene7-s7migrator:scene7configservice=scene7-config-service, com.adobe.cq.dam.cq-scene7-s7migrator:scene7assetservice=scene7-asset-service, com.day.cq.dam.cq-dam-s7dam:scene7configservice=scene7-config-service, com.day.cq.dam.cq-dam-s7dam:youtubeaccountauthenticator=youtube-authenticator-user, com.day.cq.dam.cq-dam-s7dam:workflowservice=workflow-service, com.day.cq.dam.dam-webdav-support:webdavbkpservice=webdavbkpservice, com.day.cq.dam.cq-dam-asset-usage:assetusagetrackeruser=assetusagetrackeruser, com.day.cq.dam.cq-dam-indesign:idsprocessor=idsjobprocessor, com.day.cq.dam.cq-dam-core:linkshareservice=assetlinkshareservice, com.day.cq.dam.cq-dam-core:translation-job=translation-job-service, com.adobe.cq.dam.cq-scene7-imaging:dmreplicateonmodify=dynamic-media-replication, com.adobe.cq.dam.cq-scene7-imaging:dmcontentfilter=dynamic-media-replication-filter, com.day.cq.dam.cq-dam-core:formitemsextractionhelper=dam-formitemseditor-service, com.adobe.cq.cq-dam-mac-sync:dam-replication=dam-replication-service, com.adobe.cq.cq-dam-mac-sync-helper:dam-replication-helper=dam-replication-service, com.day.cq.dam.cq-dam-commons:namespaceupdatehelper=namespace-mgmt-service, com.day.cq.dam.cq-dam-core:missingmetadatanotificationservice=assetusagetrackeruser]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.4c2793ac-f085-4478-81da-92793f67f44e
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.4c2793ac-f085-4478-81da-92793f67f44e
+  user.default =
+  user.mapping = [com.adobe.granite.crypto.jcr=cryptoservice]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.4d05f84d-445c-4b7e-a637-81ce298d5363
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.4d05f84d-445c-4b7e-a637-81ce298d5363
+  user.default =
+  user.mapping = [com.adobe.granite.security.user:userproperties-service=security-userproperties-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.51b3f0a0-4638-463b-9b1c-2e29ce3762b1
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.51b3f0a0-4638-463b-9b1c-2e29ce3762b1
+  service.ranking = 0
+  user.mapping = [com.adobe.cq.social.cq-social-group:user-admin=communities-user-admin, com.adobe.cq.social.cq-social-group:msm-service=msm-service, com.adobe.cq.social.cq-social-group:acl-manager=communities-acl-manager]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.5307062b-bff6-4eb3-ba26-d32430c2e733
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.5307062b-bff6-4eb3-ba26-d32430c2e733
+  service.ranking = 10
+  user.mapping = [com.adobe.cq.social.cq-social-notifications-impl:ugc-reader=communities-ugc-writer, com.adobe.cq.social.cq-social-notifications-impl:ugc-writer=communities-ugc-writer, com.adobe.cq.social.cq-social-notifications-impl:subscription-writer=communities-user-admin, com.adobe.cq.social.cq-social-notifications-impl:preference-reader=communities-index-admin, com.adobe.cq.social.cq-social-notifications-impl:notifications-router=communities-user-admin, com.adobe.cq.social.cq-social-notifications-channels-web:user-reader=communities-user-admin, com.adobe.cq.social.cq-social-notifications-channels-web:msm-service=msm-service, com.adobe.cq.social.cq-social-notifications-channels-web:ugc-writer=communities-ugc-writer]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.535727c5-df1b-4a90-aa6c-f3ca7f423106
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.535727c5-df1b-4a90-aa6c-f3ca7f423106
+  user.default =
+  user.mapping = [com.adobe.cq.cq-experience-fragments:omnisearch-service=omnisearch-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.554083dd-7279-442c-b3d3-34cab0c3ee03
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.554083dd-7279-442c-b3d3-34cab0c3ee03
+  user.default =
+  user.mapping = [com.adobe.granite.auth.cert=authentication-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.58420741-8656-48cc-bb82-53af7ba04e36
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.58420741-8656-48cc-bb82-53af7ba04e36
+  user.default =
+  user.mapping = [com.adobe.livecycle.formsportal-bundle=fd-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.595d5eb7-cde5-4627-a925-520c03280516
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.595d5eb7-cde5-4627-a925-520c03280516
+  user.mapping = [org.apache.sling.caconfig.impl=sling-context-aware-config-web-console]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.5da864f9-1b53-46e2-8e18-ab9cc9909a62
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.5da864f9-1b53-46e2-8e18-ab9cc9909a62
+  user.default =
+  user.mapping = [com.day.cq.wcm.cq-wcm-content-sync=pageexporterservice]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.5ddb743f-1388-4d86-8279-939dd641da29
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.5ddb743f-1388-4d86-8279-939dd641da29
+  user.default =
+  user.mapping = [com.adobe.cq.cq-targetrecommendations:deleted-products-listener=recs-deleted-products-listener-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.6450e2e7-f88e-4e71-97be-a37fd1b15d17
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.6450e2e7-f88e-4e71-97be-a37fd1b15d17
+  service.ranking = 0
+  user.mapping = [com.adobe.cq.social.cq-social-badging-basic-impl:communities-utility-reader=communities-utility-reader, com.adobe.cq.social.cq-social-badging-basic-impl:communities-ugc-writer=communities-ugc-writer, com.adobe.cq.social.cq-social-badging-basic-impl:communities-user-admin=communities-user-admin]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.64f1578d-f5c8-4d4c-b41d-d4569a2f9a90
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.64f1578d-f5c8-4d4c-b41d-d4569a2f9a90
+  user.default =
+  user.mapping = [com.adobe.granite.workflow.core:workflow=workflow-service, com.adobe.granite.workflow.core:user=workflow-user-service, com.adobe.granite.workflow.core:repo-reader=workflow-repo-reader-service, com.adobe.granite.workflow.core:process=workflow-process-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.6825e786-6b67-4857-91d0-c3bd530f4f49
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.6825e786-6b67-4857-91d0-c3bd530f4f49
+  user.default =
+  user.mapping = [com.adobe.cq.inbox.cq-inbox=omnisearch-service, com.adobe.cq.inbox.cq-inbox:inboxtype-reader=repository-reader-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.6a7fe1f6-8db0-447d-99e2-fdf42c528d13
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.6a7fe1f6-8db0-447d-99e2-fdf42c528d13
+  user.default =
+  user.mapping = [com.adobe.cq.commerce.cq-commerce-core:frontend=commerce-frontend-service, com.adobe.cq.commerce.cq-commerce-pim:backend=commerce-backend-service, com.adobe.cq.commerce.cq-commerce-pim:frontend=commerce-frontend-service, com.adobe.cq.commerce.cq-commerce-core:omnisearch-service=omnisearch-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.6f22fa31-afab-4cf4-b27b-8b6b885b43bf
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.6f22fa31-afab-4cf4-b27b-8b6b885b43bf
+  user.mapping = [com.adobe.cq.social.cq-social-enablement-impl:index-admin=communities-index-admin, com.adobe.cq.social.cq-social-enablement-impl:content-reader=communities-ugc-writer, com.adobe.cq.social.cq-social-enablement-impl:user-admin=communities-user-admin, com.adobe.cq.social.cq-social-enablement-impl:aclManager=communities-acl-manager]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.70eb145e-fd7b-48d1-966e-74529e4bdc10
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.70eb145e-fd7b-48d1-966e-74529e4bdc10
+  user.default =
+  user.mapping = [com.day.cq.wcm.cq-msm-core=msm-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.73ee34c0-72bd-4cfd-8f2b-97754c8c9994
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.73ee34c0-72bd-4cfd-8f2b-97754c8c9994
+  user.default =
+  user.mapping = [com.day.cq.cq-reporting=snapshotservice]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.78a54812-21e9-4153-b15b-1c5d490d4d13
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.78a54812-21e9-4153-b15b-1c5d490d4d13
+  user.mapping = [com.adobe.cq.social.cq-social-enablement-impl:tmpmanager=social-enablement-tmp-manager]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.78bde74b-41a6-4632-9fad-97e30196c6c4
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.78bde74b-41a6-4632-9fad-97e30196c6c4
+  user.default =
+  user.mapping = [com.adobe.granite.security.user:ssl-service=ssl-service, com.adobe.granite.security.user:sslService=ssl-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.790cefe7-02e2-425a-9509-4518fcff5805
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.790cefe7-02e2-425a-9509-4518fcff5805
+  service.ranking = 10
+  user.mapping = [com.adobe.cq.social.cq-social-qna:ugc-writer=communities-ugc-writer]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.7e896eaa-c069-45dc-8caf-4d11e7a926ee
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.7e896eaa-c069-45dc-8caf-4d11e7a926ee
+  service.ranking = 10
+  user.mapping = [com.adobe.cq.social.cq-social-journal:ugc-writer=communities-ugc-writer]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.7e999c25-0dd5-4527-ae28-7995a8a5a22d
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.7e999c25-0dd5-4527-ae28-7995a8a5a22d
+  service.ranking = 0
+  user.mapping = [com.adobe.cq.social.cq-social-badging-impl:communities-utility-reader=communities-utility-reader, com.adobe.cq.social.cq-social-badging-impl:communities-ugc-writer=communities-ugc-writer, com.adobe.cq.social.cq-social-badging-impl:communities-user-admin=communities-user-admin]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.813e325c-7ba0-4df1-9209-4f6ea3d716c2
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.813e325c-7ba0-4df1-9209-4f6ea3d716c2
+  user.mapping = [com.adobe.cq.social.cq-social-moderation:dam-collection-service=resourcecollectionservice, com.adobe.cq.social.cq-social-moderation:dam-writer=dam-update-service, com.adobe.cq.social.cq-social-moderation:communities-utility-reader=communities-utility-reader]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.83dc0fb9-8a09-4e3f-831c-065e4b37be13
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.83dc0fb9-8a09-4e3f-831c-065e4b37be13
+  service.ranking = 0
+  user.mapping = [com.adobe.cq.social.cq-social-translation:ugc-writer=communities-ugc-writer]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.83e5b03b-858b-4a0b-9b92-ff3dcad0a735
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.83e5b03b-858b-4a0b-9b92-ff3dcad0a735
+  user.default =
+  user.mapping = [com.adobe.granite.ui.clientlibs:clientlibs-service=clientlibs-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.8702d0d5-72b6-494e-be62-4a7c39ff17d0
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.8702d0d5-72b6-494e-be62-4a7c39ff17d0
+  user.default =
+  user.mapping = [com.adobe.cq.cq-analytics-integration:content-updater=analytics-content-updater-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.896b88e8-9c41-414f-a8ee-94127c3af24d
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.896b88e8-9c41-414f-a8ee-94127c3af24d
+  user.default =
+  user.mapping = [com.adobe.granite.activitystreams:activity-service=activity-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.902e1ec4-802b-435a-9ca5-e8ddc0d5ac39
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.902e1ec4-802b-435a-9ca5-e8ddc0d5ac39
+  user.default =
+  user.mapping = [com.day.cq.cq-personalization:targeted-content=campaign-reader, com.day.cq.cq-personalization:personalization-service=personalization-service, com.day.cq.cq-personalization:omnisearch-service=omnisearch-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.96a1a979-fba4-4c3a-8fe5-d6eff27f5947
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.96a1a979-fba4-4c3a-8fe5-d6eff27f5947
+  user.default =
+  user.mapping = [com.adobe.granite.crx-packagemgr:slingInstallerService=sling-installer-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.96c083c0-cb55-4c0e-9eed-db941235a4f9
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.96c083c0-cb55-4c0e-9eed-db941235a4f9
+  user.default =
+  user.mapping = [com.day.cq.cq-spellchecker=spellchecker-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.974e95a7-b056-40f6-85e3-da87e9425d61
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.974e95a7-b056-40f6-85e3-da87e9425d61
+  user.default =
+  user.mapping = [com.adobe.cq.smartcontent-core:nlp-reader=nlp-reader]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.97f6d39e-5a04-4ac4-902e-c458181f1259
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.97f6d39e-5a04-4ac4-902e-c458181f1259
+  service.ranking = 0
+  user.mapping = [com.adobe.cq.social.cq-social-console:service-user-admin=service-user-admin]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.9c1de493-f8fb-4202-a739-085ee5cb72c3
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.9c1de493-f8fb-4202-a739-085ee5cb72c3
+  user.default =
+  user.mapping = [com.adobe.granite.jetty.ssl=authentication-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.9d532aa7-0437-4024-a111-53e0b0643da8
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.9d532aa7-0437-4024-a111-53e0b0643da8
+  service.ranking = 10
+  user.mapping = [com.adobe.cq.social.cq-social-scf-api:utility-reader=communities-utility-reader, com.adobe.cq.social.cq-social-scf-impl:utility-reader=communities-utility-reader]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.9d85aa47-b927-4061-92d2-158adc2dd4a4
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.9d85aa47-b927-4061-92d2-158adc2dd4a4
+  user.mapping = [com.adobe.cq.sightly.cq-wcm-sightly-extension=sling-scripting, com.day.cq.wcm.cq-wcm-foundation=sling-scripting]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.a07b3096-97c0-4730-be59-02262dfbcd62
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.a07b3096-97c0-4730-be59-02262dfbcd62
+  user.default =
+  user.mapping = [com.day.cq.cq-replication:replicationService=replication-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.a0fb94a9-68ec-44be-a535-d1fe79d10d60
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.a0fb94a9-68ec-44be-a535-d1fe79d10d60
+  service.ranking = 10
+  user.mapping = [com.adobe.cq.social.cq-social-ideation:ugc-writer=communities-ugc-writer]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.a13f685d-e0de-417c-9505-24e1255a7d58
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.a13f685d-e0de-417c-9505-24e1255a7d58
+  service.ranking = 0
+  user.mapping = [com.adobe.cq.social.cq-social-activitystreams:stream-listener=communities-user-admin, com.adobe.cq.social.cq-social-activitystreams:ugc-writer=communities-ugc-writer]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.a21d5475-e40d-4411-8718-b7e0ec02ff79
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.a21d5475-e40d-4411-8718-b7e0ec02ff79
+  user.mapping = [org.apache.sling.discovery.commons=sling-discovery, org.apache.sling.discovery.base=sling-discovery, org.apache.sling.discovery.oak=sling-discovery]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.a4019494-52c7-4f2b-8bf2-0076c111f846
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.a4019494-52c7-4f2b-8bf2-0076c111f846
+  user.default =
+  user.mapping = [com.day.cq.wcm.cq-wcm-translation:translation-job=translation-job-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.a5e45c15-a1e2-480d-9d35-7a15d545595d
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.a5e45c15-a1e2-480d-9d35-7a15d545595d
+  service.ranking = 0
+  user.mapping = [com.adobe.cq.social.cq-social-srp-impl:ugc-writer=communities-ugc-writer, com.adobe.cq.social.cq-social-srp-impl:srp-config-reader=communities-srp-config-reader]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.a6efc7ef-6708-48b6-aff4-0cc06bfe562f
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.a6efc7ef-6708-48b6-aff4-0cc06bfe562f
+  user.default =
+  user.mapping = [com.adobe.granite.monitoring.core=monitoringScripts]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.a82a42e4-6fc8-4699-805f-66ac4bb2e4f2
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.a82a42e4-6fc8-4699-805f-66ac4bb2e4f2
+  user.default =
+  user.mapping = [com.day.cq.cq-statistics=statistics-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.ae354e53-7d44-49e1-9ba7-bdcfe09db90f
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.ae354e53-7d44-49e1-9ba7-bdcfe09db90f
+  user.default =
+  user.mapping = [com.adobe.cq.cdn.cdn-rewriter=cdn-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.af5a9a80-a48c-4747-ae36-43687ef5c4d2
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.af5a9a80-a48c-4747-ae36-43687ef5c4d2
+  user.mapping = [com.adobe.cq.social.cq-social-content-fragments-impl:communities-user-admin=communities-user-admin]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.b315fdad-2bc5-4f73-8a87-4dcdab095c57
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.b315fdad-2bc5-4f73-8a87-4dcdab095c57
+  user.default =
+  user.mapping = [com.adobe.cq.cq-security-hc:packageListService=packagelist-service, com.adobe.cq.cq-healthcheck:packageListService=packagelist-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.b65b1ecb-478b-4061-b9e7-9bda7124f731
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.b65b1ecb-478b-4061-b9e7-9bda7124f731
+  user.default =
+  user.mapping = [com.day.cq.wcm.cq-wcm-mobile-core:wurfl-loader-service=wurfl-loader-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.b956b9d7-8403-4c1d-81e0-da686cb9176e
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.b956b9d7-8403-4c1d-81e0-da686cb9176e
+  user.mapping = [org.apache.sling.resourceresolver:mapping=sling-mapping, org.apache.sling.resourceresolver:hierarchy=sling-readall, org.apache.sling.resourceresolver:observation=sling-readall, org.apache.sling.resourceresolver:console=sling-readall]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.be224608-cc7d-42e3-8f73-b1e351a6e61c
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.be224608-cc7d-42e3-8f73-b1e351a6e61c
+  service.ranking = 10
+  user.mapping = [com.adobe.cq.social.cq-social-commons:user-reader=oauthservice, com.adobe.cq.social.cq-social-commons:workflow-launcher=communities-workflow-launcher, com.adobe.cq.social.cq-social-commons:utility-reader=communities-utility-reader, com.adobe.cq.social.cq-social-commons:ugc-writer=communities-ugc-writer, com.adobe.cq.social.cq-social-commons:communities-user-admin=communities-user-admin, com.adobe.cq.social.cq-social-handlebars:utility-reader=communities-utility-reader, com.adobe.cq.social.cq-social-commons:index-admin=communities-index-admin, com.adobe.cq.social.cq-social-commons:msm-service=msm-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.bfc21c4a-9079-4900-bb53-9ecbb13dc221
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.bfc21c4a-9079-4900-bb53-9ecbb13dc221
+  user.mapping = [org.apache.sling.event=sling-event, org.apache.sling.event.dea=sling-event]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.c57fb575-c8c4-4135-9585-b752f9c361c8
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.c57fb575-c8c4-4135-9585-b752f9c361c8
+  user.default =
+  user.mapping = [com.adobe.cq.cq-target-integration:target=targetservice]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.c95a5e4c-1b4d-420b-b3d4-156016dbcad3
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.c95a5e4c-1b4d-420b-b3d4-156016dbcad3
+  user.mapping = [com.adobe.cq.core.wcm.components.core=sling-scripting]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.c9d2aa07-25bf-4a56-8e21-9aee575def29
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.c9d2aa07-25bf-4a56-8e21-9aee575def29
+  user.mapping = [com.adobe.cq.social.cq-social-content-fragments-impl:dam-collection-service=resourcecollectionservice, com.adobe.cq.social.cq-social-content-fragments-impl:dam-writer=dam-update-service, com.adobe.cq.social.cq-social-content-fragments-impl:communities-utility-reader=communities-utility-reader]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.ca02d11d-1f11-4571-82f6-941d1476bd52
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.ca02d11d-1f11-4571-82f6-941d1476bd52
+  user.default =
+  user.mapping = [com.adobe.granite.crypto.keystore=cryptoservice]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.cae3b7af-a251-4d4a-90de-e4bf39f5ea65
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.cae3b7af-a251-4d4a-90de-e4bf39f5ea65
+  user.default =
+  user.mapping = [com.adobe.granite.offloading.core:jobcloner=offloading-jobcloner, com.adobe.granite.offloading.core:offloading=offloading-service, com.adobe.granite.offloading.core:agentmanager=offloading-agentmanager, com.adobe.granite.offloading.workflow:workflow=workflow-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.cc7e12ba-8ba1-4c54-87ad-11a815f9bf5f
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.cc7e12ba-8ba1-4c54-87ad-11a815f9bf5f
+  user.default =
+  user.mapping = [org.apache.sling.distribution.core:defaultAgentService=replication-service, org.apache.sling.distribution.core=replication-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.d5d3c19d-cd01-4b38-8a11-4c308619f7ae
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.d5d3c19d-cd01-4b38-8a11-4c308619f7ae
+  user.default =
+  user.mapping = [com.day.cq.cq-audit=audit-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.d8269a67-d2bc-4354-af37-7de63e0ac376
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.d8269a67-d2bc-4354-af37-7de63e0ac376
+  user.mapping = [com.adobe.cq.com.adobe.cq.projects.core=projects-service, com.adobe.cq.com.adobe.cq.projects.core:omnisearch-service=omnisearch-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.d9d7cb3e-361b-4713-a6e7-78cf85f8869e
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.d9d7cb3e-361b-4713-a6e7-78cf85f8869e
+  user.default =
+  user.mapping = [com.adobe.cq.cq-scheduled-exporter=scheduled-exporter-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.d9f8fb98-3896-46cb-9b6a-024565683a22
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.d9f8fb98-3896-46cb-9b6a-024565683a22
+  service.ranking = 0
+  user.mapping = [com.adobe.cq.social.cq-social-console:communities-user-admin=communities-user-admin, com.adobe.cq.social.cq-social-console:msm-service=msm-service, com.adobe.cq.social.cq-social-console:ugc-writer=communities-ugc-writer]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.dce2067f-bc5c-4153-adf5-40402f5ac421
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.dce2067f-bc5c-4153-adf5-40402f5ac421
+  user.default =
+  user.mapping = [com.adobe.cq.mobile.cq-mobile-core=pageexporterservice, com.adobe.cq.mobile.cq-mobile-core:omnisearch-service=omnisearch-service, com.adobe.cq.mobile.cq-mobile-index-builder:index-admin=index-admin]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.e216c138-d23e-4a0e-b86d-5146d47d0f5b
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.e216c138-d23e-4a0e-b86d-5146d47d0f5b
+  service.ranking = 10
+  user.mapping = [com.adobe.cq.social.cq-social-commons-oauth:communities-user-admin=communities-user-admin, com.adobe.cq.social.cq-social-commons-oauth:communities-tag-admin=communities-tag-admin]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.e6785994-372f-4218-933f-c20f63bc1a84
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.e6785994-372f-4218-933f-c20f63bc1a84
+  user.mapping = [com.adobe.cq.cq-history:history-listener=history-listener-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.e7cbc762-0e4b-4706-90ae-e1e82a9de6d4
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.e7cbc762-0e4b-4706-90ae-e1e82a9de6d4
+  user.mapping = [com.adobe.cq.media.cq-media-publishing-dps-integration=media-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.e84dda7f-86d6-45f9-919a-65dd8fac2db8
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.e84dda7f-86d6-45f9-919a-65dd8fac2db8
+  user.default =
+  user.mapping = [com.day.cq.wcm.cq-wcm-core:dim-service=device-identification-service, com.day.cq.wcm.cq-wcm-core:version-purge=version-purge-service, com.day.cq.wcm.cq-wcm-core:reference-adjustment-service=reference-adjustment-service, com.day.cq.wcm.cq-wcm-core:language-manager-service=language-manager-service, com.day.cq.wcm.cq-wcm-core:primary-resource-search=primary-resource-search-service, com.day.cq.wcm.cq-wcm-core:components-search=components-search-service, com.day.cq.wcm.cq-wcm-core:version-manager=version-manager-service, com.day.cq.wcm.cq-wcm-undo:undo-service=undo-service, com.day.cq.wcm.cq-wcm-core:design-cache-service=design-cache-service, com.day.cq.wcm.cq-wcm-core:repository-change-listener-service=repository-change-listener-service, com.day.cq.wcm.cq-wcm-workflow:device-identification-service=device-identification-service, com.day.cq.wcm.cq-wcm-core:replication-service=replication-service, com.day.cq.wcm.cq-wcm-workflow:wcm-workflow-service=wcm-workflow-service, com.day.cq.wcm.cq-wcm-core:omnisearch-service=omnisearch-service, com.day.cq.wcm.cq-wcm-core:page-name-validator-service=page-name-validator-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.e87f868f-b611-463e-894b-ff0a25d86bc1
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.e87f868f-b611-463e-894b-ff0a25d86bc1
+  user.default =
+  user.mapping = [com.adobe.cq.wcm.cq-wcm-launches-core:launch-event-service=launch-event-service, com.adobe.cq.wcm.cq-wcm-launches-core:launch-promote-service=launch-promote-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.eb0248e1-e610-4b21-b65e-4cb53f620557
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.eb0248e1-e610-4b21-b65e-4cb53f620557
+  user.default =
+  user.mapping = [com.day.cq.cq-content-sync=contentsync-service]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.ef2a485d-eb89-434d-8cd3-cbaf2821442c
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.ef2a485d-eb89-434d-8cd3-cbaf2821442c
+  service.ranking = 0
+  user.mapping = [com.adobe.cq.social.cq-social-scoring-impl:communities-utility-reader=communities-utility-reader, com.adobe.cq.social.cq-social-scoring-impl:communities-ugc-writer=communities-ugc-writer]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.f4030708-62a2-4a67-9323-e62c029b6374
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.f4030708-62a2-4a67-9323-e62c029b6374
+  user.mapping = [org.apache.sling.i18n=sling-i18n]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.f495b0bf-2cfe-44b4-9a18-31893440ee97
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.f495b0bf-2cfe-44b4-9a18-31893440ee97
+  user.mapping = [org.apache.sling.installer.provider.jcr=sling-jcr-install]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.fb76a1e7-cc80-48da-b631-4c6aff6fd647
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.fb76a1e7-cc80-48da-b631-4c6aff6fd647
+  service.ranking = 0
+  user.mapping = [com.adobe.cq.social.cq-social-messaging-impl:user-admin=communities-user-admin, com.adobe.cq.social.cq-social-messaging-impl:ugc-writer=communities-ugc-writer, com.adobe.cq.social.cq-social-messaging-impl:utility-reader=communities-utility-reader, com.adobe.cq.social.cq-social-messaging-impl:acl-manager=communities-acl-manager]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.fbb453a1-6b0c-413b-b114-f20c9eb878c4
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.fbb453a1-6b0c-413b-b114-f20c9eb878c4
+  user.mapping = [com.adobe.cq.social.cq-social-moderation:communities-user-admin=communities-user-admin]
+
+PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.fce989ac-b320-437b-b8e6-ce759c8394b9
+  Factory PID = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  BundleLocation = Unbound
+  service.factoryPid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended
+  service.pid = org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended.fce989ac-b320-437b-b8e6-ce759c8394b9
+  user.mapping = [com.day.cq.cq-xssprotection=sling-xss]
+
+PID = org.apache.sling.servlets.compat.impl.JsonQueryServlet
+  BundleLocation = Unbound
+  service.pid = org.apache.sling.servlets.compat.impl.JsonQueryServlet
+  sling.servlet.extensions =
+  sling.servlet.resourceTypes =
+  sling.servlet.selectors =
+
+PID = org.apache.sling.servlets.get.DefaultGetServlet
+  BundleLocation = Unbound
+  aliases = xml:pdf
+  enable.html = false
+  enable.json = true
+  enable.txt = false
+  enable.xml = true
+  index = false
+  index.files = [index, index.html]
+  json.maximumresults = 1000
+  service.pid = org.apache.sling.servlets.get.DefaultGetServlet
+
+PID = org.apache.sling.servlets.resolver.SlingServletResolver
+  BundleLocation = Unbound
+  service.pid = org.apache.sling.servlets.resolver.SlingServletResolver
+  servletresolver.cacheSize = 1000
+  servletresolver.paths = [/bin/, /libs/, /apps/, /system/, /index.servlet, /login.servlet, /services/]
+  servletresolver.servletRoot = -1
+
+
