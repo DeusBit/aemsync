@@ -1,6 +1,6 @@
 # aemsync
 
-[![](https://jitpack.io/v/deeprim/selenium-runner.svg)](https://jitpack.io/#deeprim/aemsync)
+[![](https://jitpack.io/v/deeprim/aemsync.svg)](https://jitpack.io/#deeprim/aemsync)
 
 Usage:
 
